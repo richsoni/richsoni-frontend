@@ -1,0 +1,42 @@
+nav {
+  list-style: none;
+}
+
+.top-nav {
+  padding: 10;
+}
+
+.top-nav li {
+  float: left;
+  padding: 5;
+}
+
+.top-nav a, .top-nav a {
+  padding: 10;
+  background-color: #000;
+  color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.top-nav a:hover{
+  background-color: #3C3B3B;
+  cursor: pointer;
+}
+
+#social-nav {
+  float: left;
+}
+#sign-up-nav {
+  float: right;
+}
+#sign-up-nav {
+  width: auto;
+}
+#sign-up-nav span{
+  padding-left: 1em;
+  font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
+}
