@@ -1,7 +1,15 @@
 React = require("react")
-x= React.createClass({
-  render: () => {
-    return <div/>
+
+class RootComponent extends React.Component{
+  render() {
+    return <header>
+      <nav>
+        <li>Yo</li>
+      </nav>
+    </header>
   }
-})
-module.exports = x
+}
+
+module.exports = function(){
+  React.render(<RootComponent />, document.body)
+}
