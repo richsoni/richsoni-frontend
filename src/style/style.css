@@ -1,6 +1,8 @@
 body {
-  background: yellow;
   margin: 0;
   padding: 0;
   clear: both;
+  font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
+  max-width: 960px;
+  margin: auto auto;
 }

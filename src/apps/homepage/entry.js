@@ -1,5 +1,5 @@
-React = require("react")
-socialButtonStyle = require("./socialButton.css")
+React       = require("react")
+headerStyle = require("./header.css")
 
 class SocialButton extends React.Component{
   render(){
@@ -22,12 +22,17 @@ SocialButton.propTypes = {
 
 class RootComponent extends React.Component{
   render() {
-    return <header>
+    return <header id='homepage-header'>
       <nav className='top-nav' id='social-nav'>
         <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
         <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
         <SocialButton service='github' href='https://github.com/richsoni'/>
         <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
+      </nav>
+      <nav className='top-nav' id='internal-nav'>
+        <li id='logo'></li>
+        <li>Blog</li>
+        <li>Songs</li>
       </nav>
       <nav className='top-nav' id='sign-up-nav'>
         <SocialButton href='http://richsoni.com/subscribe' service='envelope'>
