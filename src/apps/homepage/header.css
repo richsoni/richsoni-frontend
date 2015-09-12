@@ -1,36 +1,4 @@
-/* [social] [internal] [sign up] */
-
-
-#homepage-header {
-  display: flex;
-  flex-flow: row wrap;
-}
-#homepage-header nav{
-  flex: 1 0px;
-}
-#homepage-header #internal-nav{
-  flex: 2 0px;
-  position: relative;
-}
-
-/* [  rich | blog | contact    ] */
-
-#logo{
-  background: url('/images/avatar.png');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  height:3em;
-  width:6em;
-}
-#internal-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#internal-nav li {
-  float: right;
-}
+/* nav style */
 
 nav {
   list-style: none;
@@ -45,7 +13,7 @@ nav {
   padding: 5;
 }
 
-.top-nav a, .top-nav a {
+.social-button a{
   padding: 10;
   background-color: #000;
   color: #fff;
@@ -54,7 +22,7 @@ nav {
   text-decoration: none;
 }
 
-.top-nav a:hover{
+.social-button a:hover{
   background-color: #3C3B3B;
   cursor: pointer;
 }
@@ -63,29 +31,92 @@ nav {
   padding-left: 1em;
 }
 
+img {
+  width: 210;
+  height: 113;
+}
+#sign-up-nav span {
+  text-align: center;
+}
 
-@media all and (max-width: 670px) {
-  #social-nav{
-    float: right;
-  }
-  #sign-up-nav{
-    float: right;
-  }
-  #homepage-header nav {
-    flex: 2 25%;
-    order: 2;
-  }
-  #internal-nav {
-    float: left;
-    order: 1 !important;
-    flex: 2 100% !important; 
-    justify-content: flex-start;
-  }
+#internal-nav li a{
+  border: 1px solid;
+  width:3em;
+  text-align: center;
+  padding: 5px;
 }
-@media all and (max-width: 413px) {
-  #homepage-header nav {
-    flex: 1 100%;
-    order: 2;
-    justify-content: center !important;
-  }
+#internal-nav li a:hover{
+  background-color: #ECE7E7;
+  cursor: pointer;
 }
+
+/* #logo{ */
+/*   background: url('/images/avatar.png'); */
+/*   background-position: center; */
+/*   background-size: contain; */
+/*   background-repeat: no-repeat; */
+/*   height:3em; */
+/*   width:6em; */
+/* } */
+
+/* [social] [internal] [sign up] */
+
+
+#homepage-header {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#homepage-header nav {
+  flex: 1 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* #homepage-header nav{ */
+/*   flex: 1 0px; */
+/* } */
+/* #homepage-header #internal-nav{ */
+/*   flex: 2 0px; */
+/*   position: relative; */
+/* } */
+
+/* /1* [  rich | blog | contact    ] *1/ */
+
+/* #internal-nav { */
+/*   display: flex; */
+/*   align-items: center; */
+/*   justify-content: center; */
+/* } */
+/* #internal-nav li { */
+/*   float: right; */
+/* } */
+
+
+
+/* @media all and (max-width: 670px) { */
+/*   #social-nav{ */
+/*     float: right; */
+/*   } */
+/*   #sign-up-nav{ */
+/*     float: right; */
+/*   } */
+/*   #homepage-header nav { */
+/*     flex: 2 25%; */
+/*     order: 2; */
+/*   } */
+/*   #internal-nav { */
+/*     float: left; */
+/*     order: 1 !important; */
+/*     flex: 2 100% !important; */ 
+/*     justify-content: flex-start; */
+/*   } */
+/* } */
+/* @media all and (max-width: 413px) { */
+/*   #homepage-header nav { */
+/*     flex: 1 100%; */
+/*     order: 2; */
+/*     justify-content: center !important; */
+/*   } */
+/* } */
