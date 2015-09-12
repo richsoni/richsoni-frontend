@@ -1,8 +1,6 @@
-header {
-  /* background: url('/images/avatar.png'); */
-}
-
 /* [social] [internal] [sign up] */
+
+
 #homepage-header {
   display: flex;
   flex-flow: row wrap;
@@ -65,12 +63,29 @@ nav {
   padding-left: 1em;
 }
 
-#sign-up-nav {
-  background-color: green;
+
+@media all and (max-width: 670px) {
+  #social-nav{
+    float: right;
+  }
+  #sign-up-nav{
+    float: right;
+  }
+  #homepage-header nav {
+    flex: 2 25%;
+    order: 2;
+  }
+  #internal-nav {
+    float: left;
+    order: 1 !important;
+    flex: 2 100% !important; 
+    justify-content: flex-start;
+  }
 }
-#internal-nav {
-  background-color: red;
-}
-#social-nav {
-  background-color: blue;
+@media all and (max-width: 413px) {
+  #homepage-header nav {
+    flex: 1 100%;
+    order: 2;
+    justify-content: center !important;
+  }
 }
