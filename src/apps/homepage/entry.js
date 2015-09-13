@@ -3,7 +3,10 @@ headerStyle = require("./header.css")
 
 class SocialButton extends React.Component{
   render(){
-    return <li className='social-button'>
+    return <li
+      className='social-button'
+      style={this.props.style}
+    >
       <a
         title={this.props.service}
         href={this.props.href}
@@ -15,12 +18,23 @@ class SocialButton extends React.Component{
   }
 }
 
-SocialButton.propTypes = { service: React.PropTypes.string,
-  href: React.PropTypes.string,
+SocialButton.propTypes = {
+  service: React.PropTypes.string,
+  href:  React.PropTypes.string,
+  style: React.PropTypes.string,
+}
+SocialButton.defaultProps = {
+  style: {},
 }
 
 class RootComponent extends React.Component{
   render() {
+    let liStyle = {
+      width: '100%',
+      clear: 'both',
+      textAlign: 'center',
+    }
+
     return <div>
       <header id='homepage-header'>
         <nav className='top-nav' id='social-nav'>
@@ -37,12 +51,17 @@ class RootComponent extends React.Component{
           <li><a>Songs</a></li>
         </nav>
         <nav className='top-nav' id='sign-up-nav'>
-          <SocialButton href='http://richsoni.com/subscribe' service='envelope'>
+          <li
+            id='sign-up-copy'
+            style={liStyle}
+          > Newsletter subscribers get a FREE and exclusive material... Including an UNRELEASED song immediately!!!  </li>
+          <SocialButton
+            href='http://richsoni.com/subscribe'
+            service='envelope'
+            style={liStyle}
+          >
             Sign Up
           </SocialButton>
-          <span>
-            Newsletter subscribers get a FREE and exclusive material... Including an UNRELEASED song immediately!!!
-          </span>
         </nav>
       </header>
     </div>

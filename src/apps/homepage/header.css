@@ -50,6 +50,13 @@ img {
   background-color: #ECE7E7;
   cursor: pointer;
 }
+#sign-up-copy{
+  clear:both;
+  width: 222px;
+  display: block;
+  text-align: center;
+  padding:0 30%;
+}
 
 /* [social] [internal] [sign up] */
 
@@ -65,6 +72,3 @@ img {
   flex-flow: row wrap;
   justify-content: center;
 }
-
-/* @media all and (max-width: 670px) { */
-/* } */
