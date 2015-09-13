@@ -47,8 +47,8 @@ class RootComponent extends React.Component{
           <img src='/images/avatar.png' />
         </nav>
         <nav className='top-nav' id='internal-nav'>
-          <li><a>Blog</a></li>
-          <li><a>Songs</a></li>
+          <li><a href='/blog'>Blog</a></li>
+          <li><a href='/songs'>Songs</a></li>
         </nav>
         <nav className='top-nav' id='sign-up-nav'>
           <li
