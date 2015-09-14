@@ -1,0 +1,39 @@
+.index-post .hero {
+  display: block;
+  height: 50vh;
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 700px){
+  .index-post .hero {
+    display: none;
+  }
+}
+
+.index-post {
+  max-width: 900px;
+  text-align: center;
+  padding: 50px 0;
+  border-bottom: 3px dashed;
+}
+
+.index-post blockquote {
+  font-style: italic;
+}
+
+.index-post .read {
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  font-size: 2em;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  width: 150px;
+  margin: auto;
+}
+

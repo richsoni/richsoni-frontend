@@ -26,8 +26,13 @@ const processPosts = function(collection){
 class Post extends React.Component {
   render(){
     console.log(this.props)
-    return <div>
-      <img src={this.props.attributes.hero} />
+    const date = new Date(this.props.attributes.date)
+    return <div className='index-post'>
+      <div style={{backgroundImage: `url(${this.props.attributes.hero})`}} className='hero' />
+      <h1 style={{textAlign: 'right'}}> {date.getMonth() + 1}/{date.getYear() % 100}</h1>
+      <h1> {this.props.attributes.title}</h1>
+      <blockquote>{this.props.attributes.blurb}</blockquote>
+      <div className='read'><i className='fa fa-book'/> Read</div>
     </div>
   }
 }
