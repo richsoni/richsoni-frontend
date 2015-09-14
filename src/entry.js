@@ -1,7 +1,8 @@
 require("./style/style.css")
 
 pages = {
-  homepage: require("./apps/homepage/entry")
+  homepage: require("./apps/homepage/entry"),
+  blog:     require("./apps/blog-index/entry"),
 }
 
 window.App = {
