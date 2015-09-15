@@ -2,28 +2,9 @@
 const React        = require("react")
 const style        = require("./style.css")
 const SocialButton = require("../../shared/socialButton/component")
+const parseCollection = require("../../lib/parseCollection")
+const ajax            = require("../../lib/ajax")
 
-const httpGet = function(url, callback){
-  let request = new XMLHttpRequest();
-  request.open("GET", "/blog/posts.json", true)
-  request.onreadystatechange = function () {
-    if (request.readyState != 4 || request.status != 200) return; 
-    let payload = request.responseText
-    callback(payload)
-  };
-  request.send();
-}
-
-const processPosts = function(collection){
-  return {
-    posts: Object
-      .keys(collection)
-      .sort()
-      .reverse()
-      .map((item) => [item, collection[item]])
-      .filter((item) => !item[1].attributes.depricated)
-  }
-}
 class Post extends React.Component {
   render(){
     const date = new Date(this.props.attributes.date)
@@ -39,11 +20,11 @@ class Post extends React.Component {
 class RootComponent extends React.Component{
   constructor(){
     this.state = {
-      posts: [],
+      collection: [],
     }
 
-    httpGet('/blog/posts.json', (payload) => {
-      this.setState(processPosts(JSON.parse(payload)))
+    ajax.get('/blog/posts.json', (payload) => {
+      this.setState(parseCollection(JSON.parse(payload)))
     })
   }
 
@@ -55,13 +36,13 @@ class RootComponent extends React.Component{
     </div>
   }
   _renderPosts() {
-    if (this.state.posts.length === 0){
+    if (this.state.collection.length === 0){
       return <div>
         loading
       </div>
     }
     return <div>
-      { this.state.posts.map((post) => <Post key={post[0]} {...post[1]} /> )}
+      { this.state.collection.map((post) => <Post key={post[0]} {...post[1]} /> )}
     </div>
   }
 
