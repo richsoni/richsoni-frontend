@@ -5,4 +5,45 @@ body {
   font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
   max-width: 960px;
   margin: auto auto;
+  padding-bottom: 92px;
+}
+
+header {
+  display: block;
+  position: fixed;
+  background-color: #707070;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+}
+
+footer {
+  display: block;
+  position: fixed;
+  background-color: #707070;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+}
+
+footer .social-button {
+  display: inline-block;
+}
+
+footer .copyright {
+  display: block;
+  width: 100%;
+  clear: both;
+  text-align: center;
+  font-size: .75em;
+}
+
+footer .social-buttons {
+  display: block;
+  width: 100%;
+  clear: both;
+  text-align: center;
+  font-size: .75em;
 }
