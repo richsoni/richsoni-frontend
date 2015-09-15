@@ -1,7 +1,9 @@
 "use strict"
-const React        = require("react")
-const style        = require("./style.css")
-const SocialButton = require("../../shared/socialButton/component")
+const React           = require("react")
+const style           = require("./style.css")
+const SocialButton    = require("../../shared/socialButton/component")
+const Header          = require("../../shared/header/component")
+const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 
@@ -30,9 +32,9 @@ class RootComponent extends React.Component{
 
   render() {
     return <div style={{marginTop: '3em'}}>
-      {this._renderHeader()}
+      <Header />
       {this._renderPosts()}
-      {this._renderFooter()}
+      <Footer />
     </div>
   }
   _renderPosts() {
@@ -46,33 +48,7 @@ class RootComponent extends React.Component{
     </div>
   }
 
-  _renderHeader() {
-    return <header>
-      <span id='logo'>{"{ RichSoni }"}</span>
-      <nav>
-        <li><a href='/blog'>Blog</a></li>
-        <li><a href='/songs'>Songs</a></li>
-      </nav>
-    </header>
-  }
 
-  _renderFooter() {
-    return <footer>
-      <nav className='social-buttons'>
-        <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
-        <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
-        <SocialButton service='github' href='https://github.com/richsoni'/>
-        <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
-        <SocialButton
-          href='http://richsoni.com/subscribe'
-          service='envelope'
-        >
-          &nbsp;Sign Up
-        </SocialButton>
-      </nav>
-      <div className='copyright'>Copyright {new Date().getFullYear()} RichSoni, LLC</div>
-    </footer>
-  }
 }
 
 module.exports = function(){
