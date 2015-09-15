@@ -11,25 +11,57 @@ body {
 header {
   display: block;
   position: fixed;
-  background-color: #707070;
+  background-color: #000;
   width: 100%;
   top: 0;
   left: 0;
   color: #fff;
+  -webkit-box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+  line-height: 2em;
+  box-sizing: border-box;
+  padding: .5em;
 }
 
 footer {
   display: block;
   position: fixed;
-  background-color: #707070;
+  background-color: #000;
+  overflow: hidden;
+  color: #fff;
   width: 100%;
   bottom: 0;
   left: 0;
-  color: #fff;
+  -webkit-box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.35);
 }
 
 footer .social-button {
   display: inline-block;
+}
+
+header #logo {
+  font-size: 1.5em;
+}
+
+header nav li {
+  display: inline-block;
+  margin-top: .5em;
+}
+header nav li a {
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid;
+  margin: 0 .2em;
+  display: block;
+  width: 3.5em;
+  text-align: center;
+}
+
+header nav li a:hover {
+  background-color: #3C3B3B;
 }
 
 footer .copyright {
@@ -38,6 +70,7 @@ footer .copyright {
   clear: both;
   text-align: center;
   font-size: .75em;
+  margin-top: .5em;
 }
 
 footer .social-buttons {
@@ -46,4 +79,10 @@ footer .social-buttons {
   clear: both;
   text-align: center;
   font-size: .75em;
+}
+
+header > * {
+  width: 100%;
+  text-align: center;
+  display: block;
 }

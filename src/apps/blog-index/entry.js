@@ -48,7 +48,7 @@ class RootComponent extends React.Component{
   }
 
   render() {
-    return <div>
+    return <div style={{marginTop: '3em'}}>
       {this._renderHeader()}
       {this._renderPosts()}
       {this._renderFooter()}
@@ -67,7 +67,7 @@ class RootComponent extends React.Component{
 
   _renderHeader() {
     return <header>
-      <span>{"{RichSoni}"}</span>
+      <span id='logo'>{"{ RichSoni }"}</span>
       <nav>
         <li><a href='/blog'>Blog</a></li>
         <li><a href='/songs'>Songs</a></li>
@@ -86,7 +86,7 @@ class RootComponent extends React.Component{
           href='http://richsoni.com/subscribe'
           service='envelope'
         >
-          Sign Up
+          &nbsp;Sign Up
         </SocialButton>
       </nav>
       <div className='copyright'>Copyright {new Date().getFullYear()} RichSoni, LLC</div>

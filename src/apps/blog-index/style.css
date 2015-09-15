@@ -1,3 +1,4 @@
+
 .index-post > * {
   max-width: 600px;
   margin-left: auto;
@@ -25,6 +26,7 @@
   max-width: 900px;
   text-align: center;
   padding: 50px 0;
+  margin: auto auto;
   border-bottom: 3px dashed;
 }
 
