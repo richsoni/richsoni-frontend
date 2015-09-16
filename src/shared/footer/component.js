@@ -1,6 +1,7 @@
 "use strict"
-const React = require('react')
-css         = require("./style.css")
+const React        = require('react')
+const css          = require("./style.css")
+const SocialButton = require("../../shared/socialButton/component")
 
 class Footer extends React.Component {
   render() {

@@ -1,6 +1,9 @@
-React        = require("react")
-headerStyle  = require("./header.css")
-SocialButton = require("../../shared/socialButton/component")
+"use strict"
+const React           = require("react")
+const headerStyle  = require("./header.css")
+const SocialButton = require("../../shared/socialButton/component")
+const Header       = require("../../shared/header/component")
+const Footer       = require("../../shared/footer/component")
 
 class RootComponent extends React.Component{
   render() {
@@ -11,19 +14,10 @@ class RootComponent extends React.Component{
     }
 
     return <div>
-      <header id='homepage-header'>
-        <nav className='top-nav' id='social-nav'>
-          <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
-          <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
-          <SocialButton service='github' href='https://github.com/richsoni'/>
-          <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
-        </nav>
+      <Header />
+      <div id='homepage-header'>
         <nav className='top-nav' id='logo-nav'>
           <img src='/images/avatar.png' />
-        </nav>
-        <nav className='top-nav' id='internal-nav'>
-          <li><a href='/blog'>Blog</a></li>
-          <li><a href='/songs'>Songs</a></li>
         </nav>
         <nav className='top-nav' id='sign-up-nav'>
           <li
@@ -38,7 +32,8 @@ class RootComponent extends React.Component{
             Sign Up
           </SocialButton>
         </nav>
-      </header>
+      </div>
+      <Footer />
     </div>
   }
 }

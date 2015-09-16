@@ -1,4 +1,6 @@
-css = require("./style.css")
+"use strict"
+const React = require("react")
+const css = require("./style.css")
 class SocialButton extends React.Component{
   render(){
     return <li

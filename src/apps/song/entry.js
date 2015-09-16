@@ -1,7 +1,6 @@
 "use strict"
 const React           = require("react")
 const style           = require("./style.css")
-const SocialButton    = require("../../shared/socialButton/component")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")

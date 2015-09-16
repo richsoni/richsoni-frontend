@@ -17,6 +17,12 @@ header {
 
 header #logo {
   font-size: 1.5em;
+  color: #fff;
+  text-decoration: none;
+}
+
+header #logo:hover{
+  color: papayawhip;
 }
 
 header nav li {
