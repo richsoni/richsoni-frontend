@@ -5,6 +5,7 @@ pages = {
   blog:         require("./apps/blog-index/entry"),
   'song-index': require("./apps/song-index/entry"),
   songs:        require("./apps/song/entry"),
+  'blog/posts': require("./apps/blog-post/entry"),
 }
 
 window.App = {
