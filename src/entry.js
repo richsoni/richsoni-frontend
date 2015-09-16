@@ -1,9 +1,10 @@
 require("./style/style.css")
 
 pages = {
-  homepage: require("./apps/homepage/entry"),
-  blog:     require("./apps/blog-index/entry"),
-  songs:    require("./apps/song-index/entry"),
+  homepage:     require("./apps/homepage/entry"),
+  blog:         require("./apps/blog-index/entry"),
+  'song-index': require("./apps/song-index/entry"),
+  songs:        require("./apps/song/entry"),
 }
 
 window.App = {

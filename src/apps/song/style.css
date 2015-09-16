@@ -1,0 +1,12 @@
+.song {
+  text-align: center;
+}
+.song h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.soundcloud-embed {
+  margin: 0 10px;
+}

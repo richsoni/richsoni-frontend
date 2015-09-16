@@ -9,7 +9,7 @@ const ajax            = require("../../lib/ajax")
 
 class Song extends React.Component {
   render(){
-    return <li className='index-song'>
+    return <li>
       <a href={`./${this.props.filePrefix}.html`}>{this.props.attributes.title}</a>
     </li>
   }
@@ -40,7 +40,7 @@ class RootComponent extends React.Component{
         loading
       </div>
     }
-    return <ul>
+    return <ul className='index-songs'>
       { this.state.collection.map((song) => <Song filePrefix={song[0]} key={song[0]} {...song[1]} /> )}
     </ul>
   }

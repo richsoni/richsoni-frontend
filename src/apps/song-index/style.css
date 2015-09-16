@@ -1,0 +1,12 @@
+.index-songs{
+  list-style: none;
+}
+
+.index-songs li a{
+  text-decoration: none;
+  color: #405BDA;
+}
+
+.index-songs li a:hover {
+  color: #000;
+}
