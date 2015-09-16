@@ -9,12 +9,12 @@ const ajax            = require("../../lib/ajax")
 
 class Post extends React.Component {
   render(){
-    const date = new Date(this.props.attributes.date)
+    const url = `./posts/${this.props.filePrefix}.html`
     return <div className='index-post'>
-      <h1> {this.props.attributes.title}</h1>
+      <h1> <a href={url}> {this.props.attributes.title} </a></h1>
       <blockquote>{this.props.attributes.blurb}</blockquote>
-      <div style={{backgroundImage: `url(${this.props.attributes.hero})`}} className='hero' />
-      <div className='read'><i className='fa fa-book'/> Read</div>
+      <a style={{backgroundImage: `url(${this.props.attributes.hero})`}} className='hero' href={url} />
+      <a href={url} className='read'><i className='fa fa-book'/> Read</a>
     </div>
   }
 }
@@ -44,7 +44,7 @@ class RootComponent extends React.Component{
       </div>
     }
     return <div>
-      { this.state.collection.map((post) => <Post key={post[0]} {...post[1]} /> )}
+      { this.state.collection.map((post) => <Post key={post[0]} filePrefix={post[0]} {...post[1]} /> )}
     </div>
   }
 

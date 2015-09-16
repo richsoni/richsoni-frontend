@@ -34,6 +34,15 @@
   font-style: italic;
 }
 
+.index-post h1 a:hover{
+  color: salmon;
+}
+
+.index-post h1 a{
+  color: #000000;
+  text-decoration: none;
+}
+
 .index-post .read {
   width: auto;
   height: 30px;
@@ -45,5 +54,7 @@
   width: 100px;
   margin: auto;
   margin-top: 1em;
+  display: block;
+  text-decoration: none;
 }
 
