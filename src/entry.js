@@ -1,6 +1,6 @@
 require("./style/style.css")
 
-pages = {
+const pages = {
   homepage:     require("./apps/homepage/entry"),
   blog:         require("./apps/blog-index/entry"),
   'song-index': require("./apps/song-index/entry"),

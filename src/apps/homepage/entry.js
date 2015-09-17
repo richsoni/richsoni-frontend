@@ -15,9 +15,9 @@ class RootComponent extends React.Component{
 
     return <div>
       <Header />
-      <div id='homepage-header'>
+      <div id='homepage-header' style={{maxWidth: '100%', overflow: 'hidden'}}>
         <nav className='top-nav' id='logo-nav'>
-          <img src='/images/avatar.png' />
+          <img width='200' height='110' src='/images/avatar.png' />
         </nav>
         <nav className='top-nav' id='sign-up-nav'>
           <li

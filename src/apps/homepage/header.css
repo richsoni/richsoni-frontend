@@ -26,7 +26,6 @@ nav {
   width: 222px;
   display: block;
   text-align: center;
-  padding:0 30%;
 }
 
 /* [social] [internal] [sign up] */
@@ -41,6 +40,17 @@ nav {
 #homepage-header nav {
   flex: 1 100%;
   display: flex;
-  flex-flow: row wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: row;
   justify-content: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
 }
+

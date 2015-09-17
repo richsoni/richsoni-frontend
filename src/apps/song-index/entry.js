@@ -18,6 +18,7 @@ class Song extends React.Component {
 
 class RootComponent extends React.Component{
   constructor(){
+    super()
     this.state = {
       collection: [],
     }

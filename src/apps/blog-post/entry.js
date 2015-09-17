@@ -10,6 +10,7 @@ const KEY             = window.location.pathname.replace('/blog/posts/','').repl
 
 class RootComponent extends React.Component{
   constructor(){
+    super()
     this.state = {
       collection: [],
     }
