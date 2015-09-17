@@ -1,13 +1,16 @@
 .index-songs{
-  list-style: none;
+  margin-left: 1em;
 }
 
-.index-songs li a{
+.index-songs td {
+  padding: 0 .3em;
+}
+.index-songs tr a{
   text-decoration: none;
   color: #405BDA;
 }
 
-.index-songs li a:hover {
+.index-songs tr a:hover {
   color: #000;
 }
 

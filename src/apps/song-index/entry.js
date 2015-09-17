@@ -10,9 +10,17 @@ const SOUNDCLOUD_BASE = "https://w.soundcloud.com/player/?url=https%3A//api.soun
 
 class Song extends React.Component {
   render(){
-    return <li>
-      <a href={`./${this.props.filePrefix}.html`}>{this.props.attributes.title}</a>
-    </li>
+    console.log(this.props.attributes)
+    let link;
+    if(this.props.attributes.soundcloud){
+      link = <a className='fa fa-soundcloud' href={this.props.attributes.soundcloud} />
+    } else {
+      link = <div />
+    }
+    return <tr>
+        <td>{link}</td>
+        <td><a href={`./${this.props.filePrefix}.html`}>{this.props.attributes.title}</a></td>
+    </tr>
   }
 }
 
@@ -49,9 +57,9 @@ class RootComponent extends React.Component{
         loading
       </div>
     }
-    return <ul className='index-songs'>
+    return <table className='index-songs'>
       { this.state.collection.map((song) => <Song filePrefix={song[0]} key={song[0]} {...song[1]} /> )}
-    </ul>
+    </table>
   }
 }
 
