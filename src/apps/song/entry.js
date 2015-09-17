@@ -3,6 +3,7 @@ const React           = require("react")
 const style           = require("./style.css")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
+const Disqus          = require("../../shared/disqus/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 const KEY             = window.location.pathname.replace('/songs/','').replace('.html','')
@@ -79,6 +80,9 @@ class RootComponent extends React.Component{
       return <div className='song'>
         {this.renderSoundcloud()}
         <div dangerouslySetInnerHTML={{__html: this.state.song.body}} />
+        <hr />
+        <h3>Comments</h3>
+        <Disqus />
       </div>
     }
     return <div />

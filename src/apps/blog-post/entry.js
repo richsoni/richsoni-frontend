@@ -3,6 +3,7 @@ const React           = require("react")
 const style           = require("./style.css")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
+const Disqus          = require("../../shared/disqus/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 const KEY             = window.location.pathname.replace('/blog/posts/','').replace('.html','')
@@ -38,6 +39,9 @@ class RootComponent extends React.Component{
         </div>
         <div className='hero' style={{backgroundImage: `url(${this.state.post.attributes.hero})`}} />
         <div className='blog-post-body' dangerouslySetInnerHTML={{__html: this.state.post.body}} />
+        <hr />
+        <h1>Comments</h1>
+        <Disqus />
       </div>
     }
     return <div />
