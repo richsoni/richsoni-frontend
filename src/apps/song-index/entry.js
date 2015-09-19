@@ -6,7 +6,7 @@ const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 
-const SOUNDCLOUD_BASE = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145493634&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
+const SOUNDCLOUD_BASE = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145493634&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
 
 class Song extends React.Component {
   render(){
