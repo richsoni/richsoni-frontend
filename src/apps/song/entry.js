@@ -8,6 +8,7 @@ const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 const KEY             = window.location.pathname.replace('/songs/','').replace('.html','')
 
+const YOUTUBE_BASE = "http://www.youtube.com/embed/M7lc1UVf-VE"
 const SOUNDCLOUD_BASE = "https://w.soundcloud.com/player/?url="
 const SOUNDCLOUD_OPTIONS = {
   color: "000000",         // color=(hex code without #, like 33ff00) color play button and other controls
@@ -36,8 +37,24 @@ const SOUNDCLOUD_QUERY=Object
   .map((key) => `${key}=${SOUNDCLOUD_OPTIONS[key]}`)
   .join('&amp;')
 
+const buildYoutubeURL = function(url){
+  return `${YOUTUBE_BASE}${url}`
+}
 const buildSoundCloudURL = function(url){
   return `${SOUNDCLOUD_BASE}${url}&amp;${SOUNDCLOUD_QUERY}`
+}
+
+class YoutubePlayer extends React.Component{
+  render(){
+    return <iframe
+      id="ytplayer"
+      type="text/html"
+      width="640"
+      height="390"
+      frameborder="no"
+      src={buildYoutubeURL(this.props.url)}
+    />
+
 }
 
 class SoundcloudPlayer extends React.Component{
@@ -80,6 +97,7 @@ class RootComponent extends React.Component{
     if( this.state.song ){
       return <div className='song'>
         {this.renderSoundcloud()}
+        {this.renderYoutube()}
         <div dangerouslySetInnerHTML={{__html: this.state.song.body}} />
         <hr />
         <h3>Comments</h3>
@@ -87,6 +105,14 @@ class RootComponent extends React.Component{
       </div>
     }
     return <div />
+  }
+
+  renderYoutube() {
+    if(this.state.song.attributes.youtube){
+      return <YoutubePlayer url={this.state.song.attributes.youtube} />
+    } else {
+      return <div />
+    }
   }
 
   renderSoundcloud() {
