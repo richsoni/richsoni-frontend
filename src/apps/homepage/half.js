@@ -1,12 +1,18 @@
 const React = require("react")
 let style = {
   width: '100%',
-  height: '50vh',
+  minHeight: '50vh',
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 class Half extends React.Component{
   render(){
     return <section style={Object.assign({}, style, this.props.style)}>
+      {this.props.children}
     </section>
   }
 }
