@@ -5,8 +5,8 @@ const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
+const SoundCloudPlaylist = require("../../shared/soundcloud/playlist")
 
-const SOUNDCLOUD_BASE = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/145493634&amp;color=000000&amp;theme_color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"
 
 class Song extends React.Component {
   render(){
@@ -41,7 +41,7 @@ class RootComponent extends React.Component{
       <Header />
       <div className='playlist-container'>
         <h2>Featured</h2>
-        <iframe height='100%' scrolling="no" frameborder="no" src={SOUNDCLOUD_BASE}></iframe>
+        <SoundCloudPlaylist playlistId='145493634' />
       </div>
       <div className='songs-container'>
         <h2>All Songs</h2>
