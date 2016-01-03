@@ -29,7 +29,7 @@ class SafetyTapesVol1 extends React.Component{
       <div style={leftStyle}>
         <h1 style={{color: '#004AFF'}}>Safety Tapes Vol. 1 Available Now</h1>
         <br/>
-        <h2><a style={rounded} href='https://richsoni.bandcamp.com/releases'><i className='fa fa-headphones' /> Purchase On Bandcamp!</a></h2>
+        <h2 style={rounded}><a style={{color: '#fff', textDecoration:'none'}} href='https://richsoni.bandcamp.com/releases'><i className='fa fa-headphones' /> Purchase On Bandcamp!</a></h2>
         <br/>
         <div style={{marginTop: '1em', marginBottom: '1em', textAlign: 'center'}}>
           <a style={rounded} href="https://geo.itunes.apple.com/us/album/safety-tapes-vol.-1/id1064373884?mt=1&app=music"><i className='fa fa-apple' /> iTunes</a>
