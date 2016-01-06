@@ -5,10 +5,5 @@
   line-height: 2.5em;
   text-align: center;
   text-decoration: none;
-}
-
-.social-button a:hover{
-  background-color: #3C3B3B;
   cursor: pointer;
 }
-

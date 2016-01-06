@@ -10,6 +10,67 @@ const getWindowState = () => {
   }
 }
 
+const style = {
+}
+class SocialButtons extends React.Component {
+  render(){
+    return <nav className={this.props.className || ''} style={this.props.style || {}}>
+      <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
+      <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
+      <SocialButton service='github' href='https://github.com/richsoni'/>
+      <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
+      <SocialButton
+        href='http://richsoni.com/subscribe'
+        service='envelope'
+      >
+      &nbsp;Sign Up
+      </SocialButton>
+    </nav>
+  }
+}
+
+class MenuToggle extends React.Component {
+  render(){
+    return <a
+      style={{
+        position: 'fixed',
+        display: 'block',
+        top: 0,
+        right: 0,
+        zIndex: 5,
+        height: '2.5em',
+        cursor: 'pointer',
+        color: 'white',
+      }}
+      onClick={this.props.onToggle.bind(this)}
+    >
+      <span
+        className="fa-stack fa-lg pulse"
+      >
+        <i className="fa fa-circle fa-stack-2x"></i>
+        <i
+          className='fa fa-reorder fa-stack-1x'
+          style={{
+            color: 'black',
+            transitionProperty: 'font-size',
+            transitionDuration: '.5s',
+            fontSize: this.props.showMenu ? 0 : '1em',
+          }}
+        ></i>
+        <i
+          className='fa fa-close fa-stack-1x'
+          style={{
+            color: 'black',
+            transitionProperty: 'font-size',
+            transitionDuration: '.5s',
+            fontSize: this.props.showMenu ? '1em' : 0,
+          }}
+        ></i>
+      </span>
+    </a>
+  }
+}
+
 class Small extends React.Component {
   constructor(attrs){
     super()
@@ -18,68 +79,10 @@ class Small extends React.Component {
     }
   }
   render(){
-    return <header
-          style={{
-            fontSize: '1.5em'
-          }}
-        >
-        <div style={{
-          display: 'flex',
-          position: 'absolute',
-          width: '100%',
-          backgroundColor: 'black',
-          top: 0,
-          left: 0,
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '2.9em',
-        }}>
-          <a
-            style={{
-              textDecoration: 'none',
-              color: 'white',
-            }}
-            className='pulse'
-            href='/'>{"{ RichSoni }"}</a>
-        </div>
-        <a
-          style={{
-            position: 'fixed',
-            display: 'block',
-            top: 0,
-            right: 0,
-            zIndex: 4,
-            height: '2.5em',
-            cursor: 'pointer',
-            color: 'white',
-          }}
-          onClick={this.toggleMenu.bind(this)}
-        >
-          <span
-            className="fa-stack fa-lg pulse"
-          >
-            <i className="fa fa-circle fa-stack-2x"></i>
-            <i
-              className='fa fa-reorder fa-stack-1x'
-              style={{
-                color: 'black',
-                transitionProperty: 'font-size',
-                transitionDuration: '.5s',
-                fontSize: this.state.showMenu ? 0 : '1em',
-              }}
-            ></i>
-            <i
-              className='fa fa-close fa-stack-1x'
-              style={{
-                color: 'black',
-                transitionProperty: 'font-size',
-                transitionDuration: '.5s',
-                fontSize: this.state.showMenu ? '1em' : 0,
-              }}
-            ></i>
-          </span>
-        </a>
-        <nav
+    return <header style={{ fontSize: '1.5em' }} >
+        <Logo />
+        <MenuToggle showMenu={this.state.showMenu} onToggle={this.toggleMenu.bind(this)} />
+        <div
           style={{
             backgroundColor: 'black',
             color: 'white',
@@ -99,30 +102,24 @@ class Small extends React.Component {
             flexDirection:  'column',
           }}
         >
-          <a href='/blog'>Blog</a>
-          <a href='/songs'>Songs</a>
-          <nav
-            style={{
-              marginTop: '3em',
-              width: '100%',
-              fontSize: '.8em',
-              display: 'flex',
-              justifyContent: 'center',
-            }}
-          >
-            <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
-            <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
-            <SocialButton service='github' href='https://github.com/richsoni'/>
-            <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
-            <SocialButton
-              href='http://richsoni.com/subscribe'
-              service='envelope'
-            >
-              &nbsp;Sign Up
-            </SocialButton>
+          <nav style={{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '100%',
+            alignItems: 'center',
+          }}>
+            <a style={{padding: '.3em'}} href='/blog'>Blog</a>
+            <a style={{padding: '.3em'}} href='/songs'>Songs</a>
           </nav>
+          <SocialButtons style={{
+            marginTop: '3em',
+            width: '100%',
+            fontSize: '.8em',
+            display: 'flex',
+            justifyContent: 'center',
+          }} />
           <div style={{fontSize: '.4em'}}>Copyright {new Date().getFullYear()} RichSoni, LLC</div>
-        </nav>
+        </div>
     </header>
   }
 
@@ -133,17 +130,91 @@ class Small extends React.Component {
   }
 }
 
-class Big extends React.Component {
+class Logo extends React.Component {
   render(){
-    return <div style={{display: 'block', height: '5.4em'}}>
-      <header>
-        <a href='/' id='logo'>{"{ RichSoni }"}</a>
-        <nav>
-          <li><a href='/blog'>Blog</a></li>
-          <li><a href='/songs'>Songs</a></li>
-        </nav>
-      </header>
+    return <div style={Object.assign({
+      display: 'flex',
+      position: 'absolute',
+      width: '100%',
+      backgroundColor: 'black',
+      top: 0,
+      left: 0,
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '2.9em',
+    }, this.props.style || {})}>
+      <a
+        style={{
+          textDecoration: 'none',
+          color: 'white',
+        }}
+        className='pulse'
+        href='/'>{"{ RichSoni }"}</a>
     </div>
+  }
+}
+
+class Big extends React.Component {
+  constructor(attrs){
+    super()
+    this.state = {
+      showMenu: false
+    }
+  }
+  render(){
+    return <header style={{fontSize: '1.5em'}}>
+        <Logo style={{position: 'fixed'}} />
+        <MenuToggle showMenu={this.state.showMenu} onToggle={this.toggleMenu.bind(this)} />
+        <div style={{ }}>
+          <nav
+            style={{
+              position: 'fixed',
+              zIndex: 3,
+              display: 'flex',
+              justifyContent: 'flex-end',
+              top: 0,
+              height: '2.8em',
+              right: this.state.showMenu ? 80 : -10000,
+              alignItems: 'center',
+              transitionProperty: 'right',
+              transitionDuration: '.5s',
+              width: 400,
+              overflow: 'hidden'
+            }}
+            className='hoverDim'
+          >
+            <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/blog'>Blog</a>
+            <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/songs'>Songs</a>
+          </nav>
+          <SocialButtons
+            style={{
+              position: 'fixed',
+              zIndex: 3,
+              display: 'flex',
+              justifyContent: 'flex-end',
+              top: 0,
+              height: '3.3em',
+              right: !this.state.showMenu ? 0 : -10000,
+              whitespace: 'nowrap',
+              alignItems: 'center',
+              width:  400,
+              transitionProperty: 'right',
+              transitionDuration: '.5s',
+              overflow: 'hidden',
+              fontSize: '.8em',
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+            className='hoverDim'
+          />
+        </div>
+    </header>
+  }
+
+  toggleMenu(){
+    this.setState({
+      showMenu: !this.state.showMenu,
+    })
   }
 }
 
@@ -166,7 +237,7 @@ class Header extends React.Component {
       return <Small />
     }
     else {
-      return <Small />
+      return <Big />
     }
   }
 }

@@ -26,7 +26,7 @@ class Window extends EventEmitter{
   updateDimensions(){
     this.width    = this.getWindowWidth()
     this.height   = this.getWindowHeight()
-    this.isSmall  = this.width < 700;
+    this.isSmall  = this.width < 960;
     this.emitChange()
   }
 

@@ -31,5 +31,5 @@ a:hover {
 .pulse:hover {
   -webkit-animation-name: pulse;
   -webkit-animation-duration: .7s;
-  -webkit-animation-iteration-count: 10;
+  -webkit-animation-iteration-count: 4;
 }

@@ -23,15 +23,15 @@
 /*   display: inline-block; */
 /*   margin-top: .5em; */
 /* } */
-/* header nav li a { */
-/*   text-decoration: none; */
-/*   border: 1px solid; */
-/*   margin: 0 .2em; */
-/*   display: block; */
-/*   width: 3.5em; */
-/*   text-align: center; */
-/* } */
 
-/* header nav li a:hover { */
-/*   background-color: #3C3B3B; */
-/* } */
+.hoverDim a {
+  color: #fff;
+  transition: all ease-in-out .7s;
+}
+.hoverDim:hover a {
+  color: #3C3C3C;
+}
+.hoverDim a:hover {
+  border-color: white;
+  color: white;
+}
