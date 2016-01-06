@@ -45,7 +45,7 @@ class RootComponent extends React.Component{
     // <Half style={{backgroundColor: 'black'}}>Latest Youtube Videos</Half>
     return <div>
       <Header />
-      <Half style={{backgroundImage: 'url(/images/stv1bg.png)', backgroundColor: '#000', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}></Half>
+      <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#000', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}></Half>
       <Half style={{backgroundColor: '#FF5F5F'}}><Dylcember /></Half>
       <Half style={{backgroundImage: 'url(/images/stv1bg.png)', backgroundColor: '#345288', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><SafetyTapesVol1 /></Half>
       <Half style={{backgroundColor: 'white'}}><MailingListHalf /></Half>
