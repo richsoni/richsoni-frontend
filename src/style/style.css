@@ -16,4 +16,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/*bootstrap like hidden queries */
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1.0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+  }
+  to { 
+    -webkit-transform: scale(1.0);
+  }
+}
+
+.pulse:hover {
+  -webkit-animation-name: pulse;
+  -webkit-animation-duration: .7s;
+  -webkit-animation-iteration-count: 10;
+}
