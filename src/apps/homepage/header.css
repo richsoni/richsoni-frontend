@@ -34,7 +34,6 @@ nav {
 #homepage-header {
   display: flex;
   flex-flow: row wrap;
-  padding-top: 4em;
 }
 
 #homepage-header nav {

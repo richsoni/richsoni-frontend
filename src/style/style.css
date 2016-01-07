@@ -5,7 +5,7 @@ body {
   font-family: 'Helvetica Neue', HelveticaNeue, Arial, sans-serif;
   max-width: 960px;
   margin: auto auto;
-  padding-bottom: 92px;
+  padding-bottom: 50px;
 }
 a {
   color: #428bca;
@@ -23,7 +23,7 @@ a:hover {
   50% {
     -webkit-transform: scale(1.1);
   }
-  to { 
+  to {
     -webkit-transform: scale(1.0);
   }
 }

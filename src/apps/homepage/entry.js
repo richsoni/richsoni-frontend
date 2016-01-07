@@ -11,30 +11,27 @@ const Footer          = require("../../shared/footer/component")
 
 class MailingListHalf extends React.Component{
   render(){
-    let liStyle = {
-      width: '100%',
-      clear: 'both',
-      textAlign: 'center',
-    }
-
-    return <div>
-      <div id='homepage-header' style={{maxWidth: '100%', overflow: 'hidden'}}>
-        <nav className='top-nav' id='logo-nav'>
-          <img width='200' height='110' src='/images/avatar.png' />
-        </nav>
-        <nav className='top-nav' id='sign-up-nav'>
-          <li
-            id='sign-up-copy'
-            style={liStyle}
-          > Newsletter subscribers get a FREE and exclusive material... Including an UNRELEASED song immediately!!!  </li>
+    return <div id='homepage-header' style={{
+        maxWidth: '100%',
+        overflow: 'hidden',
+        width: '1450px',
+        padding: '1em',
+        display:'flex',
+        justifyContent: 'flex-end',
+      }}>
+        <div
+          style={{
+            listStyle: 'none',
+          }}
+        >
+          <h1 style={{color: '#FFED88'}}>Join My Mailing List,</h1>
+          <h3 style={{color: '#CEB8FF'}}>Because I would like you to join my mailing list</h3>
           <SocialButton
             href='http://richsoni.com/subscribe'
             service='envelope'
-            style={liStyle}
           >
-            Sign Up
+            <span style={{marginLeft: 10}}>Sign Up</span>
           </SocialButton>
-        </nav>
       </div>
     </div>
   }
@@ -45,10 +42,9 @@ class RootComponent extends React.Component{
     // <Half style={{backgroundColor: 'black'}}>Latest Youtube Videos</Half>
     return <div>
       <Header />
-      <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#232323', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}></Half>
+      <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#232323', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}><MailingListHalf /></Half>
       <Half style={{backgroundColor: '#FF5F5F'}}><Dylcember /></Half>
       <Half style={{backgroundImage: 'url(/images/stv1bg.png)', backgroundColor: '#345288', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><SafetyTapesVol1 /></Half>
-      <Half style={{backgroundColor: 'white'}}><MailingListHalf /></Half>
       <Footer />
     </div>
   }

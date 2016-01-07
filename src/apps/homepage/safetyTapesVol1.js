@@ -8,6 +8,7 @@ const containerStyle = {
   alignItems: 'center',
   padding: '1em',
   maxWidth: '1200px',
+  overflow: 'hidden',
 }
 
 const leftStyle = {
@@ -17,7 +18,6 @@ const leftStyle = {
 
 const rightStyle = {
   alignSelf: 'flex-end',
-  height: '40vh',
   width: '372px',
   textAlign: 'center',
 }
