@@ -21,7 +21,7 @@ class Post extends React.Component {
     >
       <div>{date}</div> 
       <div style={{
-        marginLeft: '1em',
+        marginLeft: '2em',
         maxWidth: 500,
       }}>
         <div>{this.props.attributes.title}</div>
