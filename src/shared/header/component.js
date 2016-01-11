@@ -3,8 +3,9 @@ const React       = require('react')
 const SocialButton = require("../../shared/socialButton/component")
 const responsiveComponentComposer = require("../../shared/responsiveComponentComposer")
 const assign = require("object-assign")
+const Radium = require("radium")
 
-class SocialButtons extends React.Component {
+class _SocialButtons extends React.Component {
   render(){
     return <nav className={this.props.className || ''} style={this.props.style || {}}>
       <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
@@ -20,8 +21,9 @@ class SocialButtons extends React.Component {
     </nav>
   }
 }
+const SocialButtons = Radium(_SocialButtons)
 
-class MenuToggle extends React.Component {
+class _MenuToggle extends React.Component {
   render(){
     return <a
       style={{
@@ -62,6 +64,7 @@ class MenuToggle extends React.Component {
     </a>
   }
 }
+const MenuToggle = Radium(_MenuToggle)
 
 class Small extends React.Component {
   constructor(attrs){
@@ -121,7 +124,7 @@ class Small extends React.Component {
   }
 }
 
-class Logo extends React.Component {
+class _Logo extends React.Component {
   render(){
     return <div style={assign({
       display: 'flex',
@@ -145,6 +148,7 @@ class Logo extends React.Component {
     </div>
   }
 }
+const Logo = Radium(_Logo)
 
 class Big extends React.Component {
   constructor(attrs){
@@ -209,7 +213,7 @@ class Big extends React.Component {
 }
 
 module.exports = responsiveComponentComposer({
-  big: Big,
-  small: Small
+  big: Radium(Big),
+  small: Radium(Small),
 })
 

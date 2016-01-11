@@ -1,4 +1,5 @@
 const React           = require("react")
+const Radium          = require("radium")
 
 const containerStyle = {
   display: 'flex',
@@ -43,4 +44,4 @@ class SafetyTapesVol1 extends React.Component{
   }
 }
 
-module.exports = SafetyTapesVol1
+module.exports = Radium(SafetyTapesVol1)

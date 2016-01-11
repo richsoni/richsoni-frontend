@@ -7,6 +7,7 @@ const ajax            = require("../../lib/ajax")
 const PostPreview     = require("./post-preview")
 const PostGrid        = require("./post-grid")
 const PostList        = require("./post-list")
+const Radium          = require("radium")
 
 let postComponents = {
   preview: PostPreview,
@@ -28,7 +29,7 @@ const postsWrap = {
   }
 }
 
-class RootComponent extends React.Component{
+class _RootComponent extends React.Component{
   constructor(){
     super()
     this.state = {
@@ -118,6 +119,7 @@ class RootComponent extends React.Component{
     </div>
   }
 }
+const RootComponent = Radium(_RootComponent)
 
 module.exports = function(){
   React.render(<RootComponent />, document.body)

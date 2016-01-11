@@ -1,4 +1,5 @@
 const React = require("react")
+const Radium          = require("radium")
 const assign = require("object-assign")
 let style = {
   width: '100%',
@@ -28,4 +29,4 @@ Half.defaultProps = {
   style: {},
 }
 
-module.exports = Half
+module.exports = Radium(Half)

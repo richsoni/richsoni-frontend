@@ -1,6 +1,7 @@
 "use strict"
 const React           = require("react")
 const SoundCloudPlaylist = require("../../shared/soundcloud/playlist")
+const Radium          = require("radium")
 
 const containerStyle = {
   display: 'flex',
@@ -65,4 +66,4 @@ class Dylcember extends React.Component{
   }
 }
 
-module.exports = Dylcember
+module.exports = Radium(Dylcember)

@@ -8,8 +8,9 @@ const Dylcember       = require("./dylcember")
 const SafetyTapesVol1 = require("./safetyTapesVol1")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
+const Radium          = require("radium")
 
-class MailingListHalf extends React.Component{
+class _MailingListHalf extends React.Component{
   render(){
     return <div id='homepage-header' style={{
         maxWidth: '100%',
@@ -36,8 +37,9 @@ class MailingListHalf extends React.Component{
     </div>
   }
 }
+const MailingListHalf = Radium(_MailingListHalf)
 
-class RootComponent extends React.Component{
+class _RootComponent extends React.Component{
   render() {
     // <Half style={{backgroundColor: 'black'}}>Latest Youtube Videos</Half>
     return <div>
@@ -49,6 +51,7 @@ class RootComponent extends React.Component{
     </div>
   }
 }
+const RootComponent = Radium(_RootComponent)
 
 module.exports = function(){
   React.render(<RootComponent />, document.body)

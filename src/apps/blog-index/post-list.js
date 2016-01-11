@@ -1,6 +1,7 @@
 "use strict"
 const React           = require("react")
 const moment          = require("moment")
+const Radium          = require("radium")
 
 class Post extends React.Component {
   render(){
@@ -51,4 +52,4 @@ class Post extends React.Component {
   }
 }
 
-module.exports = Post
+module.exports = Radium(Post)
