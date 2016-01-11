@@ -33,7 +33,7 @@ class RootComponent extends React.Component{
     super()
     this.state = {
       collection: [],
-      currentView: 'list',
+      currentView: 'preview',
     }
     ajax.get('/blog/posts.json', (payload) => {
       this.setState(parseCollection(JSON.parse(payload)))
