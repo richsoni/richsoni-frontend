@@ -77,7 +77,6 @@ class Small extends React.Component {
           style={{
             backgroundColor: 'black',
             color: 'white',
-            width: '100%',
             position: 'fixed',
             top: !this.state.showMenu ? '-10000' : 0,
             height: '100%',
