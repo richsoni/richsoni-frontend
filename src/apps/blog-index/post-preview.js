@@ -1,9 +1,8 @@
 "use strict"
 const React           = require("react")
 const moment          = require("moment")
-const responsiveComponentComposer = require("../../shared/responsiveComponentComposer")
 
-class Small extends React.Component {
+class Post extends React.Component {
   render(){
     const url  = `./posts/${this.props.filePrefix}.html`
     const date = new moment(this.props.attributes.date).format('MM/DD/YYYY')
@@ -67,9 +66,4 @@ class Small extends React.Component {
   }
 }
 
-const Big = Small
-
-module.exports = responsiveComponentComposer({
-  big: Big,
-  small: Small,
-})
+module.exports = Post

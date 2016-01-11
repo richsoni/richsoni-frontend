@@ -5,11 +5,27 @@ const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
 const PostPreview     = require("./post-preview")
+const PostGrid        = require("./post-grid")
+const PostList        = require("./post-list")
 
 let postComponents = {
   preview: PostPreview,
-  grid: PostPreview,
-  list: PostPreview,
+  grid: PostGrid,
+  list: PostList,
+}
+
+const postsWrap = {
+  preview: {},
+  grid: {
+    display: 'flex',
+    flexFlow: 'row wrap',
+    maxWidth: 600,
+    margin: 'auto auto',
+    paddingTop: '2em',
+  },
+  list: {
+  
+  }
 }
 
 class RootComponent extends React.Component{
@@ -17,7 +33,7 @@ class RootComponent extends React.Component{
     super()
     this.state = {
       collection: [],
-      currentView: 'preview',
+      currentView: 'list',
     }
     ajax.get('/blog/posts.json', (payload) => {
       this.setState(parseCollection(JSON.parse(payload)))
@@ -55,7 +71,7 @@ class RootComponent extends React.Component{
             className='hoverFade'
           >
             {this.renderControl('preview', 'fa-align-justify')}
-            {this.renderControl('tile', 'fa-th')}
+            {this.renderControl('grid', 'fa-th')}
             {this.renderControl('list', 'fa-list-ul')}
           </div>
         </div>
@@ -97,7 +113,7 @@ class RootComponent extends React.Component{
         loading
       </div>
     }
-    return <div>
+    return <div style={postsWrap[this.state.currentView]}>
       { this.state.collection.map((post) => <Component key={post[0]} filePrefix={post[0]} {...post[1]} /> )}
     </div>
   }

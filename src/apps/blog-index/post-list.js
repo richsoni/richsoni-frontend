@@ -2,37 +2,34 @@
 const React           = require("react")
 const moment          = require("moment")
 
-class PostGrid extends React.Component {
+class Post extends React.Component {
   render(){
     const date = new moment(this.props.attributes.date).format('MM/DD/YYYY')
     const link = `/blog/posts/${this.props.filePrefix}.html`
-    return <a
+    return <a href={link}
       style={{
         borderBottom: '1px solid #bebebe',
         paddingBottom: '1em',
-        width: 250,
+        paddingTop: '1em',
+        maxWidth: 650,
         margin: 'auto auto',
-        height: '23em',
-        display: 'block',
+        color: '#000',
+        overflow: 'hidden',
+        display: 'flex',
       }}
-      href={link}
     >
-      <div
-        style={{
-          display: 'block',
-          color: '#000',
-          textDecoration: 'none',
-          backgroundImage: `url(${this.props.attributes.hero})`,
-          height: 280,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundColor: '#bebebe',
-        }} />
-      <h1 style={{
-        marginBottom: '.4em',
-        fontSize: '1em',
-      }}>{this.props.attributes.title}</h1>
+      <div>{date}</div> 
+      <div style={{
+        marginLeft: '1em',
+        maxWidth: 500,
+      }}>
+        <div>{this.props.attributes.title}</div>
+        <blockquote style={{
+          fontStyle: 'italic',
+          margin: 0,
+          color: '#797979',
+        }}>{this.props.attributes.blurb}</blockquote>
+      </div>
     </a>
   }
 
@@ -54,4 +51,4 @@ class PostGrid extends React.Component {
   }
 }
 
-module.exports = PostGrid
+module.exports = Post
