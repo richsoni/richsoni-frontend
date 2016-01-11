@@ -17,6 +17,7 @@ class Post extends React.Component {
         color: '#000',
         overflow: 'hidden',
         display: 'flex',
+        flexFlow: 'row wrap',
       }}
     >
       <div>{date}</div> 
