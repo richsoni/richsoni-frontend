@@ -1,4 +1,5 @@
 const React = require("react")
+const assign = require("object-assign")
 let style = {
   width: '100%',
   minHeight: '50vh',
@@ -14,7 +15,7 @@ let style = {
 
 class Half extends React.Component{
   render(){
-    return <section style={Object.assign({}, style, this.props.style)}>
+    return <section style={assign({}, style, this.props.style)}>
       {this.props.children}
     </section>
   }

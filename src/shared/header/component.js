@@ -2,6 +2,7 @@
 const React       = require('react')
 const SocialButton = require("../../shared/socialButton/component")
 const responsiveComponentComposer = require("../../shared/responsiveComponentComposer")
+const assign = require("object-assign")
 
 class SocialButtons extends React.Component {
   render(){
@@ -122,7 +123,7 @@ class Small extends React.Component {
 
 class Logo extends React.Component {
   render(){
-    return <div style={Object.assign({
+    return <div style={assign({
       display: 'flex',
       position: 'absolute',
       width: '100%',
@@ -181,8 +182,7 @@ class Big extends React.Component {
             style={{
               position: 'fixed',
               zIndex: 3,
-              display: 'flex',
-              justifyContent: 'flex-end',
+              justifyContent: 'center',
               top: 0,
               height: '3.3em',
               right: !this.state.showMenu ? 0 : -10000,
@@ -194,7 +194,6 @@ class Big extends React.Component {
               overflow: 'hidden',
               fontSize: '.8em',
               display: 'flex',
-              justifyContent: 'center',
             }}
             className='hoverDim'
           />
