@@ -1,17 +1,8 @@
 "use strict"
 const React       = require('react')
-const css         = require("./style.css")
-const WindowStore = require("../../stores/windowStore")
 const SocialButton = require("../../shared/socialButton/component")
+const responsiveComponentComposer = require("../../shared/responsiveComponentComposer")
 
-const getWindowState = () => {
-  return {
-    isSmall: WindowStore.isSmall
-  }
-}
-
-const style = {
-}
 class SocialButtons extends React.Component {
   render(){
     return <nav className={this.props.className || ''} style={this.props.style || {}}>
@@ -218,28 +209,8 @@ class Big extends React.Component {
   }
 }
 
-class Header extends React.Component {
-  constructor(attrs){
-    super(attrs)
-    this.state = getWindowState()
-  }
+module.exports = responsiveComponentComposer({
+  big: Big,
+  small: Small
+})
 
-  componentDidMount(){
-    WindowStore.addChangeListener(this._onChange.bind(this))
-  }
-
-  _onChange(){
-    this.setState(getWindowState())
-  }
-
-  render() {
-    if(this.state.isSmall){
-      return <Small />
-    }
-    else {
-      return <Big />
-    }
-  }
-}
-
-module.exports = Header

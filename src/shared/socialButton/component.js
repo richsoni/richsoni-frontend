@@ -1,11 +1,12 @@
 "use strict"
 const React = require("react")
 const css = require("./style.css")
+const assign = require("object-assign")
 class SocialButton extends React.Component{
   render(){
     return <li
       className='social-button'
-      style={this.props.style}
+      style={assign({listStyle: 'none'},this.props.style)}
     >
       <a
         title={this.props.service}

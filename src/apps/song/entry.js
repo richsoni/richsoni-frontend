@@ -69,7 +69,7 @@ class RootComponent extends React.Component{
 
   render() {
     console.log(this.state.song)
-    return <div style={{marginTop: '3em'}}>
+    return <div style={{marginTop: '5em'}}>
       <Header />
       {this.renderSong()}
       <Footer />

@@ -23,7 +23,7 @@ class RootComponent extends React.Component{
   }
 
   render() {
-    return <div style={{marginTop: '3em'}}>
+    return <div style={{marginTop: '5em'}}>
       <Header />
       {this.renderPost()}
       <Footer />

@@ -9,7 +9,9 @@
     "css-loader": "^0.18.0",
     "flux": "^2.1.1",
     "jsx-loader": "^0.13.2",
+    "moment": "^2.11.1",
     "object-assign": "^4.0.1",
+    "radium": "^0.16.1",
     "react": "^0.13.3",
     "style-loader": "^0.12.4",
     "webpack": "^1.12.2"
