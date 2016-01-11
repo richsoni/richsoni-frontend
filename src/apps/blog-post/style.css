@@ -19,6 +19,7 @@ body {
 
 .blog-post-body, .post {
   color: #333333;
+  background-color: #fff;
   line-height: 1.42857;
   max-width: 48em;
   margin: auto !important;
