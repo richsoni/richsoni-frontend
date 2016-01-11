@@ -1,5 +1,6 @@
 "use strict"
 const React           = require("react")
+const moment          = require("moment")
 const style           = require("./style.css")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
@@ -32,11 +33,11 @@ class RootComponent extends React.Component{
 
   renderPost() {
     if( this.state.post ){
-      const d = new Date()
+      const date = new moment(this.state.post.attributes.date).format('MM/DD/YYYY')
       return <div className='post'>
         <div className='post-heading'>
-          <h3>{d.getMonth()}/{d.getDay()}/{d.getFullYear()}</h3>
           <h1 className='title'>{this.state.post.attributes.title}</h1>
+          <div style={{fontStyle: 'italic', marginBottom: '1em'}}>Posted {date}</div>
         </div>
         <div className='hero' style={{backgroundImage: `url(${this.state.post.attributes.hero})`}} />
         <div className='blog-post-body' dangerouslySetInnerHTML={{__html: this.state.post.body}} />

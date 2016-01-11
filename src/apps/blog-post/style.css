@@ -1,15 +1,16 @@
 .hero {
   width: 100%;
-  height: 35vw;
+  height: 280px;
   background-size:cover;
   background-position: center;
 }
 
 .post h1, .blog-post-body h1{
-  color: #ff5722;
-  font-size: 2.125rem;
-  font-weight: 400;
-  line-height: 1.1764;
+  color: #428bca;
+}
+
+.post a {
+  color: #0089FF;
 }
 
 .blog-post-body, .post {
@@ -21,7 +22,7 @@
 }
 
 .blog-post-body em, .blog-post-body strong {
-  color: #ff6e40;
+  color: #6391FF;
 }
 
 .blog-post-body blockquote {
@@ -30,7 +31,7 @@
   line-height: 1.5;
   opacity: .87;
   clear: both;
-  border-left: .25em solid #ff9e80;
+  border-left: .25em solid #80AAFF;
   padding: 10px 20px;
   margin: 0 0 20px;
   font-style: italic;
@@ -50,12 +51,14 @@
 
 .blog-post-body ul:not(.default){
   list-style: none;
-  border-left: .25em solid #ff6e40;
+  border-left: .25em solid #6391FF;
   padding-left: 1em;
 }
 
 .blog-post-body pre{
-  background-color: rgb(254, 249, 248);
+  z-index: -1;
+  color: #4B0CBF;
+  background-color: #E7ECFB;
   border-bottom-color: rgb(204, 204, 204);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -79,7 +82,6 @@
   border-top-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.239216) 0px 1.29999995231628px 1.29999995231628px 0px;
   box-sizing: border-box;
-  color: rgb(191, 54, 12);
   display: block;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 13px;
@@ -102,8 +104,9 @@
 }
 
 .blog-post-body code {
-  color: #bf360c;
-  background-color: #fbe9e7;
+  z-index: 0;
+  color: #4B0CBF;
+  background-color: #E7ECFB;
 }
 .blog-post-body pre code {
   padding: 0;

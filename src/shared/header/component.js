@@ -128,6 +128,7 @@ class Logo extends React.Component {
       position: 'absolute',
       width: '100%',
       backgroundColor: 'black',
+      zIndex: 1,
       top: 0,
       left: 0,
       justifyContent: 'center',
