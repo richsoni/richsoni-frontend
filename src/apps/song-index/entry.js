@@ -1,28 +1,30 @@
 "use strict"
 const React           = require("react")
-const style           = require("./style.css")
+const Radium          = require("radium")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
-const SoundCloudPlaylist = require("../../shared/soundcloud/playlist")
 
-
-class Song extends React.Component {
+class _Song extends React.Component {
   render(){
-    console.log(this.props.attributes)
-    let link;
-    if(this.props.attributes.soundcloud){
-      link = <a className='fa fa-soundcloud' href={this.props.attributes.soundcloud} />
-    } else {
-      link = <div />
-    }
-    return <tr>
-        <td>{link}</td>
-        <td><a href={`./${this.props.filePrefix}.html`}>{this.props.attributes.title}</a></td>
-    </tr>
+    return <li style={{
+        color: '#000',
+        fontSize: '1.5em',
+        padding: '.2em',
+      }}>
+        <a style={{
+          color: '#000',
+          ':hover': {
+            color: '#000',
+          }
+          }}
+          key={this.props.filePrefix}
+          href={`./${this.props.filePrefix}.html`}>{this.props.attributes.title}</a>
+    </li>
   }
 }
+const Song = Radium(_Song)
 
 class RootComponent extends React.Component{
   constructor(){
@@ -37,14 +39,20 @@ class RootComponent extends React.Component{
   }
 
   render() {
-    return <div className='song-index-wrap'>
+    return <div style={{
+      paddingTop: '5em',
+      paddingBottom: '2em',
+      backgroundColor: '#232323',
+    }}>
       <Header />
-      <div className='playlist-container'>
-        <h2>Featured</h2>
-        <SoundCloudPlaylist playlistId='145493634' />
-      </div>
-      <div className='songs-container'>
-        <h2>All Songs</h2>
+      <div style={{
+        backgroundColor: 'white',
+        maxWidth: 960,
+        margin: 'auto auto',
+        fontFamily: "'Shadows Into Light', cursive",
+        textAlign: 'center',
+      }}>
+        <h1> My Songs </h1>
         {this._renderSongs()}
       </div>
       <Footer />
@@ -57,9 +65,13 @@ class RootComponent extends React.Component{
         loading
       </div>
     }
-    return <table className='index-songs'>
+    return <ul style={{
+      listStyle: 'none',
+      margin: 0,
+      padding: 0,
+    }}>
       { this.state.collection.map((song) => <Song filePrefix={song[0]} key={song[0]} {...song[1]} /> )}
-    </table>
+    </ul>
   }
 }
 
