@@ -61,7 +61,6 @@ body {
 }
 
 .blog-post-body pre{
-  z-index: -1;
   color: #4B0CBF;
   background-color: #E7ECFB;
   border-bottom-color: rgb(204, 204, 204);
