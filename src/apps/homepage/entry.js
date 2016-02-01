@@ -18,7 +18,6 @@ class _RootComponent extends React.Component{
       <Header />
       <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#232323', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}><MailingListHalf /></Half>
       <Half style={{backgroundColor: '#FF5F5F'}}><Dylcember /></Half>
-      <Half style={{backgroundColor: '#FF5F5F'}}><Dylcember /></Half>
       <Half style={{backgroundImage: 'url(/images/stv1bg.png)', backgroundColor: '#345288', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><SafetyTapesVol1 /></Half>
       <Footer />
     </div>
