@@ -26,6 +26,16 @@ class _Song extends React.Component {
 }
 const Song = Radium(_Song)
 
+class Heading extends React.Component{
+  render(){
+    return <h1 style={{
+      borderBottom: '1px solid #bebebe',
+      color: '#333333',
+    }}
+    >{this.props.children}</h1>
+  }
+}
+
 class RootComponent extends React.Component{
   constructor(){
     super()
@@ -49,10 +59,13 @@ class RootComponent extends React.Component{
         backgroundColor: 'white',
         maxWidth: 960,
         margin: 'auto auto',
-        fontFamily: "'Shadows Into Light', cursive",
-        textAlign: 'center',
+        textAlign: 'left',
+        padding: '1em',
       }}>
-        <h1> My Songs </h1>
+        <Heading>Safety Tapes</Heading>
+        <Heading>Live Bootlegs</Heading>
+        <Heading>Video</Heading>
+        <Heading>All Songs</Heading>
         {this._renderSongs()}
       </div>
       <Footer />
