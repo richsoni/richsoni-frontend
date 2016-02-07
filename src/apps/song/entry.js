@@ -62,6 +62,4 @@ class RootComponent extends React.Component{
   }
 }
 
-module.exports = function(){
-  React.render(<RootComponent />, document.body)
-}
+module.exports = RootComponent

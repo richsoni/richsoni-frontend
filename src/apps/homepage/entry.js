@@ -25,6 +25,4 @@ class _RootComponent extends React.Component{
 }
 const RootComponent = Radium(_RootComponent)
 
-module.exports = function(){
-  React.render(<RootComponent />, document.body)
-}
+module.exports = RootComponent

@@ -1,4 +1,5 @@
 require("./style/style.css")
+const React = require("react")
 
 const pages = {
   homepage:     require("./apps/homepage/entry"),
@@ -10,9 +11,10 @@ const pages = {
 
 window.App = {
   pages: pages,
-  boot: function(page){
-    if (pages[page]){
-      pages[page]()
+  boot: function(page, attrs){
+    let Component = pages[page]
+    if (Component){
+      React.render(<Component {...attrs} />, document.body)
     } else {
       console.error(page, ' is not an app')
     }

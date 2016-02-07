@@ -4,7 +4,53 @@ const Radium          = require("radium")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const parseCollection = require("../../lib/parseCollection")
+const releases        = require("../../data/releases")
 const ajax            = require("../../lib/ajax")
+const moment          = require('moment')
+
+class _Album extends React.Component {
+  render(){
+    const size=200;
+    return <div
+        style={{
+          width: size,
+          textAlign: 'center',
+        }}
+      >
+      <div style={{
+        width:size,
+        height:size,
+        border: '1px solid #bebebe',
+        backgroundImage: `url(${this.props.artwork})`,
+        backgroundSize: 'cover',
+        display: 'flex',
+        alignItems: 'flex-end',
+        justifyContent: 'center',
+      }}>
+        {this._renderLinks()}
+      </div>
+      <div
+        style={{
+          marginTop: '.2em',
+        }}
+      >
+        {this.props.title}
+      </div>
+    </div>
+  }
+
+  _renderLinks(){
+    return this.props.links.map((link) => {
+      return <a href={link.href}><i className={`fa fa-${link.fa}`}/></a>
+    })
+  }
+}
+
+_Album.defaultProps = {
+  image: React.PropTypes.string.isRequired,
+  title: React.PropTypes.string.isRequired,
+}
+const Album = Radium(_Album)
 
 class _Song extends React.Component {
   render(){
@@ -63,12 +109,30 @@ class RootComponent extends React.Component{
         padding: '1em',
       }}>
         <Heading>Safety Tapes</Heading>
+        {this._renderCategory("Safety Tapes")}
         <Heading>Live Bootlegs</Heading>
+        {this._renderCategory("Live Bootlegs")}
         <Heading>Video</Heading>
         <Heading>All Songs</Heading>
         {this._renderSongs()}
       </div>
       <Footer />
+    </div>
+  }
+
+  _renderCategory(category){
+    let x = moment('12/12/12')
+    const albums = releases
+      .filter((release) => release.category == category)
+      .map((release) => <Album {...release} />)
+    return <div
+        style={{
+          display: 'flex',
+          flexFlow: 'row wrap',
+        }}
+      >
+      {x}
+      {albums}
     </div>
   }
 
@@ -88,6 +152,4 @@ class RootComponent extends React.Component{
   }
 }
 
-module.exports = function(){
-  React.render(<RootComponent />, document.body)
-}
+module.exports = RootComponent

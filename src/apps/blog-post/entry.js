@@ -7,10 +7,10 @@ const Footer          = require("../../shared/footer/component")
 const Disqus          = require("../../shared/disqus/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
-const KEY             = window.location.pathname.replace('/blog/posts/','').replace('.html','')
 
 class RootComponent extends React.Component{
-  constructor(){
+  constructor(attrs){
+    const KEY = attrs.pathname.replace('/blog/posts/','').replace('.html','')
     super()
     this.state = {
       collection: [],
@@ -49,6 +49,5 @@ class RootComponent extends React.Component{
     return <div />
   }
 }
-module.exports = function(){
-  React.render(<RootComponent />, document.body)
-}
+
+module.exports = RootComponent
