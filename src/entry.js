@@ -1,5 +1,5 @@
 require("./style/style.css")
-const React = require("react")
+const React = window.React = require("react")
 
 const pages = {
   homepage:     require("./apps/homepage/entry"),
