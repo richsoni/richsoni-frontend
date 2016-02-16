@@ -1,12 +1,14 @@
 "use strict"
 const React           = require("react")
 const moment          = require("moment")
-const style           = require("./style.css")
+const style           = require("./style.js")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const Disqus          = require("../../shared/disqus/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
+const Radium          = require("Radium")
+const Style = Radium.Style
 
 class RootComponent extends React.Component{
   constructor(attrs){
@@ -25,6 +27,7 @@ class RootComponent extends React.Component{
 
   render() {
     return <div style={{marginTop: '5em'}}>
+      <Style rules={style}></Style>
       <Header />
       {this.renderPost()}
       <Footer />

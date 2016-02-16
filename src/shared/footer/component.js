@@ -1,16 +1,35 @@
 "use strict"
 const React        = require('react')
-const css          = require("./style.css")
 const SocialButton = require("../../shared/socialButton/component")
 
 class Footer extends React.Component {
   render() {
-    return <footer>
-      <nav className='social-buttons'>
-        <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
-        <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
-        <SocialButton service='github' href='https://github.com/richsoni'/>
-        <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
+    return <footer
+      style={{
+        display: 'block',
+        position: 'fixed',
+        backgroundColor: '#000',
+        overflow: 'hidden',
+        color: '#fff',
+        width: '100%',
+        bottom: 0,
+        left: 0,
+        boxShadow: '0 -3px 14px rgba(0, 0, 0, 0.35)',
+      }}
+    >
+      <nav className='social-buttons'
+        style={{
+          display: 'block',
+          width: '100%',
+          clear: 'both',
+          textAlign: 'center',
+          fontSize: '.75em',
+        }}
+      >
+        <SocialButton style={{display: 'inline-block'}} service='soundcloud' href='https://soundcloud.com/richsoni' />
+        <SocialButton style={{display: 'inline-block'}} service='twitter' href='https://twitter.com/richsoni'/>
+        <SocialButton style={{display: 'inline-block'}} service='github' href='https://github.com/richsoni'/>
+        <SocialButton style={{display: 'inline-block'}} service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
         <SocialButton
           href='http://richsoni.com/subscribe'
           service='envelope'
@@ -18,7 +37,14 @@ class Footer extends React.Component {
           &nbsp;Sign Up
         </SocialButton>
       </nav>
-      <div className='copyright'>Copyright {new Date().getFullYear()} RichSoni, LLC</div>
+      <div style={{
+        display: 'block',
+        width: '100%',
+        clear: 'both',
+        textAlign: 'center',
+        fontSize: '.75em',
+        marginTop: '.5em',
+      }}>Copyright {new Date().getFullYear()} RichSoni, LLC</div>
     </footer>
   }
 }

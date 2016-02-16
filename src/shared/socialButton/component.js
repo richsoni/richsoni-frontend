@@ -1,6 +1,5 @@
 "use strict"
 const React = require("react")
-const css = require("./style.css")
 const assign = require("object-assign")
 class SocialButton extends React.Component{
   render(){
@@ -11,6 +10,15 @@ class SocialButton extends React.Component{
       <a
         title={this.props.service}
         href={this.props.href}
+        style={{
+          padding: 10,
+          backgroundColor: '#000',
+          color: '#fff',
+          lineHeight: '2.5em',
+          textAlign: 'center',
+          textDecoration: 'none',
+          cursor: 'pointer',
+        }}
       >
         <i className={`fa fa-${this.props.service}`}></i>
         <span>{this.props.children}</span>

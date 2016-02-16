@@ -45,7 +45,6 @@ class _RootComponent extends React.Component{
     return <div style={{
       paddingTop: '5em',
       paddingBottom: '2em',
-      backgroundColor: '#232323',
     }}>
       <Header />
       <div style={{

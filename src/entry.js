@@ -1,4 +1,3 @@
-require("./style/style.css")
 const React = window.React = require("react")
 
 const pages = {

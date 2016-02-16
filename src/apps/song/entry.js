@@ -1,6 +1,5 @@
 "use strict"
 const React           = require("react")
-const style           = require("./style.css")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const Disqus          = require("../../shared/disqus/component")
@@ -42,7 +41,9 @@ class RootComponent extends React.Component{
 
   renderSong() {
     if( this.state.song ){
-      return <div className='song'>
+      return <div style={{
+        textAlign: 'center',
+      }}>
         {this.renderSoundcloud()}
         <div dangerouslySetInnerHTML={{__html: this.state.song.body}} />
         <hr />
@@ -57,7 +58,11 @@ class RootComponent extends React.Component{
     if(this.state.song.attributes.soundcloud){
       return <SoundcloudPlayer url={this.state.song.attributes.soundcloud} />
     } else {
-      return <h1> {this.state.song.attributes.title} </h1>
+      return <h1 style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}> {this.state.song.attributes.title} </h1>
     }
   }
 }
