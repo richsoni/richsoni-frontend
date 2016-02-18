@@ -34,7 +34,8 @@ class _Album extends React.Component {
           marginTop: '.2em',
         }}
       >
-        {this.props.title}
+        {this.props.title}<br />
+        {this.props.releaseDate.format("MM/YYYY")}
       </div>
     </div>
   }
@@ -112,7 +113,6 @@ class RootComponent extends React.Component{
         {this._renderCategory("Safety Tapes")}
         <Heading>Live Bootlegs</Heading>
         {this._renderCategory("Live Bootlegs")}
-        <Heading>Video</Heading>
         <Heading>All Songs</Heading>
         {this._renderSongs()}
       </div>
@@ -121,9 +121,13 @@ class RootComponent extends React.Component{
   }
 
   _renderCategory(category){
-    let x = moment('12/12/12')
     const albums = releases
       .filter((release) => release.category == category)
+      .map((release) => {
+        release.releaseDate = new moment(release.releaseDate)
+        return release
+      })
+      .sort((a,b) => a.releaseDate < b.releaseDate )
       .map((release) => <Album {...release} />)
     return <div
         style={{
@@ -131,7 +135,6 @@ class RootComponent extends React.Component{
           flexFlow: 'row wrap',
         }}
       >
-      {x}
       {albums}
     </div>
   }
