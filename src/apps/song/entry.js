@@ -29,7 +29,6 @@ class RootComponent extends React.Component{
         backgroundColor: 'white',
         maxWidth: 960,
         margin: 'auto auto',
-        fontFamily: "'Shadows Into Light', cursive",
         textAlign: 'center',
         padding: '1em',
       }}>
@@ -44,7 +43,11 @@ class RootComponent extends React.Component{
       return <div style={{
         textAlign: 'center',
       }}>
-        {this.renderSoundcloud()}
+        <h1 style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }}> {this.state.song.attributes.title} </h1>
         <div dangerouslySetInnerHTML={{__html: this.state.song.body}} />
         <hr />
         <h3>Comments</h3>
@@ -52,18 +55,6 @@ class RootComponent extends React.Component{
       </div>
     }
     return <div />
-  }
-
-  renderSoundcloud() {
-    if(this.state.song.attributes.soundcloud){
-      return <SoundcloudPlayer url={this.state.song.attributes.soundcloud} />
-    } else {
-      return <h1 style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}> {this.state.song.attributes.title} </h1>
-    }
   }
 }
 
