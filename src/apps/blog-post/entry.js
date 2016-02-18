@@ -7,7 +7,7 @@ const Footer          = require("../../shared/footer/component")
 const Disqus          = require("../../shared/disqus/component")
 const parseCollection = require("../../lib/parseCollection")
 const ajax            = require("../../lib/ajax")
-const Radium          = require("Radium")
+const Radium          = require("radium")
 const Style = Radium.Style
 
 class RootComponent extends React.Component{
