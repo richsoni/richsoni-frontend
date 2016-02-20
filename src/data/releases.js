@@ -38,5 +38,16 @@ module.exports = [
       {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
     ]
   },
-
+  {
+    id: 'rs00005', title: 'Angels\' Share',
+    releaseDate: '02-20-2016',
+    category: 'Studio Release',
+    artwork: '/images/angelsshare.png',
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/album/the-angels-share'},
+      {service: 'iTunes', href:'https://itunes.apple.com/us/album/the-angels-share/id1080917282'},
+      {service: 'Amazon', href:'https://www.amazon.com/Angels-Share-Rich-Soni/dp/B01BF1ACC8/ref=sr_1_1?ie=UTF8&qid=1455978534&sr=8-1&keywords=rich+soni+angels+share'},
+      {service: 'Spotify', albumId: '3iQQmrlEQI45uT5FnGLcJ6'},
+    ],
+  },
 ]

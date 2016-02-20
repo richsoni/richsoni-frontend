@@ -3,6 +3,7 @@ const React           = require("react")
 const Half            = require("../../shared/half")
 const Dylcember       = require("./dylcember")
 const SafetyTapesVol1 = require("./safetyTapesVol1")
+const AngelsShare     = require("./angelsShareComponent")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
 const Radium          = require("radium")
@@ -27,6 +28,7 @@ class _RootComponent extends React.Component{
       </Style>
       <Header />
       <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#232323', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}><MailingListHalf /></Half>
+      <Half style={{backgroundImage: 'url(/images/angelssharebg.png)', backgroundColor: '#4A6468', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><AngelsShare /></Half>
       <Half style={{backgroundColor: '#FF5F5F'}}><Dylcember /></Half>
       <Half style={{backgroundImage: 'url(/images/stv1bg.png)', backgroundColor: '#345288', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><SafetyTapesVol1 /></Half>
       <Footer />

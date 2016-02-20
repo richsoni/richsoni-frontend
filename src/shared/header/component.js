@@ -74,7 +74,7 @@ class Small extends React.Component {
     }
   }
   render(){
-    return <header style={{ fontSize: '1.5em' }} >
+    return <header style={{ fontSize: '1.5em', height: 70 }} >
         <Logo />
         <MenuToggle showMenu={this.state.showMenu} onToggle={this.toggleMenu.bind(this)} />
         <div
@@ -158,7 +158,7 @@ class Big extends React.Component {
     }
   }
   render(){
-    return <header style={{fontSize: '1.5em'}}>
+    return <header style={{fontSize: '1.5em', height: 70}}>
         <Logo style={{position: 'fixed'}} />
         <MenuToggle showMenu={this.state.showMenu} onToggle={this.toggleMenu.bind(this)} />
         <div style={{ }}>

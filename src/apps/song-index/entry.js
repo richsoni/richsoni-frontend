@@ -109,6 +109,8 @@ class RootComponent extends React.Component{
         textAlign: 'left',
         padding: '1em',
       }}>
+        <Heading>Albums</Heading>
+        {this._renderCategory("Studio Release")}
         <Heading>Safety Tapes</Heading>
         {this._renderCategory("Safety Tapes")}
         <Heading>Live Bootlegs</Heading>

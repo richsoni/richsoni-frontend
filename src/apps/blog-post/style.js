@@ -22,7 +22,8 @@ module.exports = {
     color: '#333333',
     backgroundColor: '#fff',
     lineHeight: '1.42857',
-    maxWidth: '48em',
+    maxWidth: '100%',
+    overflow: 'hidden',
     margin: 'auto !important',
     padding: '1em',
   },
@@ -165,6 +166,7 @@ module.exports = {
 
   '.blog-post-body *': {
     maxWidth: '100%',
+    overflow: 'scroll',
   },
 
   mediaQueries: {
