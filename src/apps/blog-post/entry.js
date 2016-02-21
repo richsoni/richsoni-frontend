@@ -37,12 +37,24 @@ class RootComponent extends React.Component{
   renderPost() {
     if( this.state.post ){
       const date = new moment(this.state.post.attributes.date).format('MM/DD/YYYY')
-      return <div className='post'>
+      return <div
+      style={{
+        padding: '2em',
+      }}
+      className='post'>
         <div className='post-heading'>
           <h1 className='title'>{this.state.post.attributes.title}</h1>
           <div style={{fontStyle: 'italic', marginBottom: '1em'}}>Posted {date}</div>
         </div>
-        <div className='hero' style={{backgroundImage: `url(${this.state.post.attributes.hero})`}} />
+        <div
+          style={{
+            backgroundImage: `url(${this.state.post.attributes.hero})`,
+            width: '100%',
+            height: this.state.post.attributes.hero ? '280px' : 0,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            borderBottom: '1px solid #bebebe',
+        }} />
         <div className='blog-post-body' dangerouslySetInnerHTML={{__html: this.state.post.body}} />
         <hr />
         <h1>Comments</h1>

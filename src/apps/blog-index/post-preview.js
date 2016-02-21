@@ -22,7 +22,31 @@ class Post extends React.Component {
         fontStyle: 'italic',
         marginBottom: '1em'
       }}>Posted {date}</div>
-      <div
+      {this.hero()}
+      {this.blurb()}
+      <div style={{
+        fontSize: '.8em',
+        color: '#444',
+      }} dangerouslySetInnerHTML={{__html: this.getPreview()}} />
+      <a style={{
+      }} href={link}>Read More...</a>
+    </div>
+  }
+
+  blurb(){
+    if(this.props.attributes.blurb){
+      return <blockquote style={{
+        fontStyle: 'italic',
+        margin: 0,
+        padding: '1em 0',
+      }}>{this.props.attributes.blurb}</blockquote>
+    } else {
+      return <div />
+    }
+  }
+  hero(){
+    if(this.props.attributes.hero){
+      return <div
         style={{
           display: 'block',
           color: '#000',
@@ -34,20 +58,10 @@ class Post extends React.Component {
           backgroundPosition: 'center',
           backgroundColor: '#bebebe',
         }} />
-      <blockquote style={{
-        fontStyle: 'italic',
-        margin: 0,
-        padding: '1em 0',
-      }}>{this.props.attributes.blurb}</blockquote>
-      <div style={{
-        fontSize: '.8em',
-        color: '#444',
-      }} dangerouslySetInnerHTML={{__html: this.getPreview()}} />
-      <a style={{
-      }} href={link}>Read More...</a>
-    </div>
+    } else {
+      <div />
+    }
   }
-
   getPreview(){
     let tree       = document.createElement("div")
     let result     = ""

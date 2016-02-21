@@ -3,12 +3,6 @@ module.exports = {
     backgroundColor: '#232323',
   },
 
-  '.hero': {
-    width: '100%',
-    height: '280px',
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  },
 
   '.post h1, .blog-post-body h1':{
     color: '#428bca',
@@ -25,7 +19,6 @@ module.exports = {
     maxWidth: '100%',
     overflow: 'hidden',
     margin: 'auto !important',
-    padding: '1em',
   },
 
   '.blog-post-body em, .blog-post-body strong': {
