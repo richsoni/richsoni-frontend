@@ -162,6 +162,10 @@ module.exports = {
     overflow: 'scroll',
   },
 
+  '.blog-post-body ol': {
+    overflow: 'auto',
+  },
+
   mediaQueries: {
     '(max-width: 650px)':{
       '.blog-post-body aside:not(.nohide)': {
