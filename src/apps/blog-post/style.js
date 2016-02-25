@@ -162,7 +162,7 @@ module.exports = {
     overflow: 'scroll',
   },
 
-  '.blog-post-body ol .blog-post-body li': {
+  '.blog-post-body ol, .blog-post-body li': {
     overflow: 'initial',
   },
 
