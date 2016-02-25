@@ -163,7 +163,7 @@ module.exports = {
   },
 
   '.blog-post-body ol': {
-    overflow: 'auto',
+    overflow: 'initial',
   },
 
   mediaQueries: {
