@@ -27,7 +27,7 @@ class PostGrid extends React.Component {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          backgroundColor: '#fffffff',
+          backgroundColor: '#bebebe',
         }} />
       <h1 style={{
         marginBottom: '.4em',
