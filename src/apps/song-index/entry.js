@@ -17,7 +17,7 @@ class _Album extends React.Component {
           textAlign: 'center',
         }}
       >
-      <div style={{
+      <a style={{
         width:size,
         height:size,
         border: '1px solid #bebebe',
@@ -26,9 +26,10 @@ class _Album extends React.Component {
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
-      }}>
-        {this._renderLinks()}
-      </div>
+      }}
+      href={this.props.href}
+      >
+      </a>
       <div
         style={{
           marginTop: '.2em',
@@ -38,12 +39,6 @@ class _Album extends React.Component {
         {this.props.releaseDate.format("MM/YYYY")}
       </div>
     </div>
-  }
-
-  _renderLinks(){
-    return this.props.links.map((link) => {
-      return <a href={link.href}><i className={`fa fa-${link.fa}`}/></a>
-    })
   }
 }
 
