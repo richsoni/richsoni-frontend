@@ -6,7 +6,7 @@ const release = releases.filter(function(release){
 })[0]
 
 const getLink = function(service){
-  return release.filter(function(link){
+  return release.links.filter(function(link){
     return link.service === service;
   })[0]
 }

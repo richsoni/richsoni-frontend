@@ -6,6 +6,11 @@ module.exports = [
     category: 'Safety Tapes',
     artwork: '/images/stv1.png',
     href:'http://songlikes.com/23ct1',
+    links: [
+      {service: 'iTunes',   href: 'https://geo.itunes.apple.com/us/album/safety-tapes-vol.-1/id1064373884?mt=1&app=music'},
+      {service: 'Amazon',   href: 'http://www.amazon.com/gp/product/B018VUMEE0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B018VUMEE0&linkCode=as2&tag=richsonicom-20&linkId=EZMGLDPQNAWR7FLC'},
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
+    ]
   },
   {
     id: 'rs00002', title: 'Poor Henry\'s',
@@ -13,6 +18,9 @@ module.exports = [
     category: 'Live Bootlegs',
     artwork: '/images/1-16-16-ph.png',
     href:'http://songlikes.com/27m2o',
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
+    ]
   },
   {
     id: 'rs00003', title: 'Fine Grind',
@@ -20,6 +28,9 @@ module.exports = [
     category: 'Live Bootlegs',
     artwork: '/images/1-25-16-fg.png',
     href:'http://songlikes.com/1fpqi',
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
+    ]
   },
   {
     id: 'rs00004', title: 'Poor Henrys',
@@ -27,6 +38,9 @@ module.exports = [
     category: 'Live Bootlegs',
     artwork: '/images/1-31-16-ph.jpg',
     href:'http://songlikes.com/38ttp',
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
+    ]
   },
   {
     id: 'rs00005', title: 'Angels\' Share',
@@ -34,5 +48,11 @@ module.exports = [
     category: 'Studio Release',
     artwork: '/images/angelsshare.png',
     href:'http://songlikes.com/h6n0c',
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/album/the-angels-share'},
+      {service: 'iTunes', href:'https://itunes.apple.com/us/album/the-angels-share/id1080917282'},
+      {service: 'Amazon', href:'https://www.amazon.com/Angels-Share-Rich-Soni/dp/B01BF1ACC8/ref=sr_1_1?ie=UTF8&qid=1455978534&sr=8-1&keywords=rich+soni+angels+share'},
+      {service: 'Spotify', albumId: '3iQQmrlEQI45uT5FnGLcJ6'},
+    ],
   },
 ]
