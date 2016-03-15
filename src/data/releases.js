@@ -5,7 +5,7 @@ module.exports = [
     tracks: [ 'sr00001', 'sr00002', 'sr00003', 'sr00004', 'sr00005', 'sr00006', 'sr00007', 'sr00008', 'sr00009', 'sr00010', 'sr00011', 'sr00012'],
     category: 'Safety Tapes',
     artwork: '/images/stv1.png',
-    href:'http://songlikes.com/23ct1',
+    href:'http://bandflare.com/23ct1',
     links: [
       {service: 'iTunes',   href: 'https://geo.itunes.apple.com/us/album/safety-tapes-vol.-1/id1064373884?mt=1&app=music'},
       {service: 'Amazon',   href: 'http://www.amazon.com/gp/product/B018VUMEE0/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=B018VUMEE0&linkCode=as2&tag=richsonicom-20&linkId=EZMGLDPQNAWR7FLC'},
@@ -17,7 +17,7 @@ module.exports = [
     releaseDate: '01-16-2016',
     category: 'Live Bootlegs',
     artwork: '/images/1-16-16-ph.png',
-    href:'http://songlikes.com/27m2o',
+    href:'http://bandflare.com/27m2o',
     links: [
       {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
     ]
@@ -27,7 +27,7 @@ module.exports = [
     releaseDate: '01-25-2016',
     category: 'Live Bootlegs',
     artwork: '/images/1-25-16-fg.png',
-    href:'http://songlikes.com/1fpqi',
+    href:'http://bandflare.com/1fpqi',
     links: [
       {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
     ]
@@ -37,7 +37,7 @@ module.exports = [
     releaseDate: '01-31-2016',
     category: 'Live Bootlegs',
     artwork: '/images/1-31-16-ph.jpg',
-    href:'http://songlikes.com/38ttp',
+    href:'http://bandflare.com/38ttp',
     links: [
       {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/releases'},
     ]
@@ -47,7 +47,7 @@ module.exports = [
     releaseDate: '02-20-2016',
     category: 'Studio Release',
     artwork: '/images/angelsshare.png',
-    href:'http://songlikes.com/h6n0c',
+    href:'http://bandflare.com/h6n0c',
     links: [
       {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/album/the-angels-share'},
       {service: 'iTunes', href:'https://itunes.apple.com/us/album/the-angels-share/id1080917282'},
