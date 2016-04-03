@@ -59,8 +59,13 @@ module.exports = [
     id: 'rs00006', title: 'Safety Tapes Vol.2 (Since The Last Blood Moon)',
     releaseDate: '03-03-2016',
     category: 'Safety Tapes',
-    artwork: '/images/stv2.png',
+    artwork: '/images/stv2.jpg',
     href:'http://www.bandflare.com/131ts',
-    links: [],
+    links: [
+      {service: 'Bandcamp', href: 'https://richsoni.bandcamp.com/album/safety-tapes-vol-2-since-the-last-blood-moon'},
+      {service: 'iTunes', href:'https://itunes.apple.com/us/album/safety-tapes-vol.-2-since/id1095558201'},
+      {service: 'Amazon', href:'https://www.amazon.com/gp/product/B01DAKV13G/ref=dm_ws_sp_ps_dp'},
+      {service: 'Spotify', albumId: '4J9Qkzb8rKklZdKrOqcUUj'},
+    ],
   },
 ]
