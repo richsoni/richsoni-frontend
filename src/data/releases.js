@@ -55,4 +55,12 @@ module.exports = [
       {service: 'Spotify', albumId: '3iQQmrlEQI45uT5FnGLcJ6'},
     ],
   },
+  {
+    id: 'rs00006', title: 'Safety Tapes Vol.2 (Since The Last Blood Moon)',
+    releaseDate: '03-03-2016',
+    category: 'Safety Tapes',
+    artwork: '/images/stv2.png',
+    href:'http://www.bandflare.com/131ts',
+    links: [],
+  },
 ]
