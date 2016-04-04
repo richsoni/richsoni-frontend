@@ -21,13 +21,13 @@ class _Album extends React.Component {
         width:size,
         height:size,
         border: '1px solid #bebebe',
-        backgroundImage: `url(${this.props.artwork})`,
+        backgroundImage: `url(${this.props.image_url})`,
         backgroundSize: 'cover',
         display: 'flex',
         alignItems: 'flex-end',
         justifyContent: 'center',
       }}
-      href={this.props.href}
+      href={this.props.url}
       >
       </a>
       <div
@@ -36,7 +36,6 @@ class _Album extends React.Component {
         }}
       >
         {this.props.title}<br />
-        {this.props.releaseDate.format("MM/YYYY")}
       </div>
     </div>
   }
@@ -105,11 +104,11 @@ class RootComponent extends React.Component{
         padding: '1em',
       }}>
         <Heading>Albums</Heading>
-        {this._renderCategory("Studio Release")}
+        {this._renderCategory("studio")}
         <Heading>Safety Tapes</Heading>
-        {this._renderCategory("Safety Tapes")}
+        {this._renderCategory("safetytapes")}
         <Heading>Live Bootlegs</Heading>
-        {this._renderCategory("Live Bootlegs")}
+        {this._renderCategory("live")}
         <Heading>All Songs</Heading>
         {this._renderSongs()}
       </div>
@@ -119,7 +118,7 @@ class RootComponent extends React.Component{
 
   _renderCategory(category){
     const albums = releases
-      .filter((release) => release.category == category)
+      .filter((release) => release.tags && release.tags.indexOf(category) > -1)
       .map((release) => {
         release.releaseDate = new moment(release.releaseDate)
         return release
