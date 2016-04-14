@@ -182,6 +182,7 @@ class Big extends React.Component {
           >
             <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/blog'>Blog</a>
             <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/songs'>Songs</a>
+            <a style={{textDecoration: 'none', marginLeft: '1em'}} href='https://www.facebook.com/richsonimusic/events'>Live</a>
           </nav>
           <SocialButtons
             style={{
