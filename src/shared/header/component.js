@@ -104,6 +104,7 @@ class Small extends React.Component {
           }}>
             <a style={{padding: '.3em'}} href='/blog'>Blog</a>
             <a style={{padding: '.3em'}} href='/songs'>Songs</a>
+            <a style={{padding: '.3em'}} href='https://www.facebook.com/richsonimusic/events'>Live</a>
           </nav>
           <SocialButtons style={{
             marginTop: '3em',
