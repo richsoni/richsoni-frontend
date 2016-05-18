@@ -15,6 +15,10 @@ class _Album extends React.Component {
         style={{
           width: size,
           textAlign: 'center',
+          padding: '1em',
+          backgroundColor: '#fff',
+          boxShadow: '0px 0px 1px #797878',
+          margin: '1em',
         }}
       >
       <a style={{
@@ -71,7 +75,7 @@ class Heading extends React.Component{
   render(){
     return <h1 style={{
       borderBottom: '1px solid #bebebe',
-      color: '#333333',
+      color: '#e8e8e8',
     }}
     >{this.props.children}</h1>
   }
@@ -97,7 +101,6 @@ class RootComponent extends React.Component{
     }}>
       <Header />
       <div style={{
-        backgroundColor: 'white',
         maxWidth: 960,
         margin: 'auto auto',
         textAlign: 'left',
@@ -109,8 +112,6 @@ class RootComponent extends React.Component{
         {this._renderCategory("safetytapes")}
         <Heading>Live Bootlegs</Heading>
         {this._renderCategory("live")}
-        <Heading>All Songs</Heading>
-        {this._renderSongs()}
       </div>
       <Footer />
     </div>

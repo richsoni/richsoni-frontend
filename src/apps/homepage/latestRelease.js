@@ -2,9 +2,10 @@ const React           = require("react")
 const Radium          = require("radium")
 const releases        = require("../../data/releases")
 
-const release = releases.filter(function(release){
-  return release.id === 17
-})[0]
+const release = releases
+  .filter(function(release){ return !release.tags.match("live")})
+  .sort(function(releaseA, releaseB){ return releaseA.created_at < releaseB.created_at })[0]
+
 
 const getLink = function(service){
   return release.links.filter(function(link){
@@ -44,7 +45,7 @@ class SafetyTapesVol1 extends React.Component{
     const rounded = {backgroundColor: '#000000', color:'#ffffff', padding: '1em', marginLeft: '1em'}
     return <div style={containerStyle}>
       <div style={leftStyle}>
-        <h1 style={{backgroundColor:'#ffffff',padding:2, textAlign: 'center', color: '#000000'}}>Safety Tapes Vol. 2 Available Now!!!</h1>
+        <h1 style={{backgroundColor:'#ffffff',padding:2, textAlign: 'center', color: '#000000'}}>{release.title} Available Now!!!</h1>
         <br/>
         <h2 style={rounded}><a style={{color: '#fff', textDecoration:'none'}} href={getLink('Bandcamp').url}><i className='fa fa-headphones' /> Purchase On Bandcamp!</a></h2>
         <br/>

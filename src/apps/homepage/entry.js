@@ -1,7 +1,7 @@
 "use strict"
 const React           = require("react")
 const Half            = require("../../shared/half")
-const SafetyTapesVol2 = require("./safetyTapesVol2")
+const LatestRelease   = require("./LatestRelease")
 const AngelsShare     = require("./angelsShareComponent")
 const Header          = require("../../shared/header/component")
 const Footer          = require("../../shared/footer/component")
@@ -27,7 +27,7 @@ class _RootComponent extends React.Component{
       </Style>
       <Header />
       <Half style={{backgroundImage: 'url(/images/stv1bgt.png)', backgroundColor: '#232323', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}><MailingListHalf /></Half>
-      <Half style={{backgroundImage: 'url(/images/stv2bg.jpg)', backgroundPosition: 'center center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><SafetyTapesVol2 /></Half>
+      <Half style={{backgroundImage: 'url(/images/stv3bg.png)', backgroundPosition: 'center center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><LatestRelease /></Half>
       <Footer />
     </div>
   }
