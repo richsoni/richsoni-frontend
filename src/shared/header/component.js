@@ -103,7 +103,7 @@ class Small extends React.Component {
             alignItems: 'center',
           }}>
             <a style={{padding: '.3em'}} href='/blog'>Blog</a>
-            <a style={{padding: '.3em'}} href='/songs'>Songs</a>
+            <a style={{padding: '.3em'}} href='/music'>Music</a>
             <a style={{padding: '.3em'}} href='https://www.facebook.com/richsonimusic/events'>Live</a>
           </nav>
           <SocialButtons style={{
@@ -181,7 +181,7 @@ class Big extends React.Component {
             className='hoverDim'
           >
             <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/blog'>Blog</a>
-            <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/songs'>Songs</a>
+            <a style={{textDecoration: 'none', marginLeft: '1em'}}href='/music'>Music</a>
             <a style={{textDecoration: 'none', marginLeft: '1em'}} href='https://www.facebook.com/richsonimusic/events'>Live</a>
           </nav>
           <SocialButtons
