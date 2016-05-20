@@ -11,8 +11,8 @@ class _SocialButtons extends React.Component {
       <SocialButton service='spotify' href='https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O' />
       <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
       <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
+      <SocialButton service='facebook' href='https://www.facebook.com/richsonimusic/'/>
       <SocialButton service='github' href='https://github.com/richsoni'/>
-      <SocialButton service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
       <SocialButton
         href='http://richsoni.com/subscribe'
         service='envelope'
