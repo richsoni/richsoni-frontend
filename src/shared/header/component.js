@@ -8,6 +8,7 @@ const Radium = require("radium")
 class _SocialButtons extends React.Component {
   render(){
     return <nav className={this.props.className || ''} style={this.props.style || {}}>
+      <SocialButton service='spotify' href='https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O' />
       <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
       <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
       <SocialButton service='github' href='https://github.com/richsoni'/>
