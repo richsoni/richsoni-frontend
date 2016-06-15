@@ -4,9 +4,7 @@ const SocialButton    = require("../../shared/socialButton/component")
 class _MailingListHalf extends React.Component{
   render(){
     return <div style={{
-        maxWidth: '100%',
         overflow: 'hidden',
-        width: '1450px',
         padding: '1em',
         display:'flex',
         justifyContent: 'flex-end',
