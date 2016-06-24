@@ -34,7 +34,6 @@ class _RootComponent extends React.Component{
         backgroundRepeat: 'no-repeat',
         padding: '1em 0',
         backgroundPosition: 'center'}}>
-        <EventsHalf />
         <MailingListHalf />
       </Half>
       <Half style={{backgroundImage: 'url(/images/stv3bg.png)', backgroundPosition: 'center center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><LatestRelease /></Half>
