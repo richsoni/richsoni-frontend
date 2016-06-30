@@ -26,10 +26,12 @@ class Footer extends React.Component {
           fontSize: '.75em',
         }}
       >
-        <SocialButton style={{display: 'inline-block'}} service='soundcloud' href='https://soundcloud.com/richsoni' />
-        <SocialButton style={{display: 'inline-block'}} service='twitter' href='https://twitter.com/richsoni'/>
-        <SocialButton style={{display: 'inline-block'}} service='github' href='https://github.com/richsoni'/>
-        <SocialButton style={{display: 'inline-block'}} service='linkedin' href='https://www.linkedin.com/in/richsoni'/>
+      <SocialButton style={{display: 'inline-block'}} service='spotify' href='https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O' />
+      <SocialButton style={{display: 'inline-block'}} service='soundcloud' href='https://soundcloud.com/richsoni' />
+      <SocialButton style={{display: 'inline-block'}} service='play' href='https://play.google.com/store/music/artist/i.json?id=Ap23zu5ishxv26bjhwt3z5kwx4q' />
+      <SocialButton style={{display: 'inline-block'}} service='twitter' href='https://twitter.com/richsoni'/>
+      <SocialButton style={{display: 'inline-block'}} service='facebook' href='https://www.facebook.com/richsonimusic/'/>
+      <SocialButton style={{display: 'inline-block'}} service='github' href='https://github.com/richsoni'/>
         <SocialButton
           href='http://richsoni.com/subscribe'
           service='envelope'
