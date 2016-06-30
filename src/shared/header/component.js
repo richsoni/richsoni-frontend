@@ -10,6 +10,7 @@ class _SocialButtons extends React.Component {
     return <nav className={this.props.className || ''} style={this.props.style || {}}>
       <SocialButton service='spotify' href='https://open.spotify.com/artist/2ZmsHRFwH3sGTrarxwgK9O' />
       <SocialButton service='soundcloud' href='https://soundcloud.com/richsoni' />
+      <SocialButton service='play' href='https://play.google.com/store/music/artist/i.json?id=Ap23zu5ishxv26bjhwt3z5kwx4q' />
       <SocialButton service='twitter' href='https://twitter.com/richsoni'/>
       <SocialButton service='facebook' href='https://www.facebook.com/richsonimusic/'/>
       <SocialButton service='github' href='https://github.com/richsoni'/>
@@ -192,7 +193,7 @@ class Big extends React.Component {
               justifyContent: 'center',
               top: 0,
               height: '3.3em',
-              right: !this.state.showMenu ? 0 : -10000,
+              right: !this.state.showMenu ? 30 : -10000,
               whitespace: 'nowrap',
               alignItems: 'center',
               width:  400,
