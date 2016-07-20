@@ -36,7 +36,7 @@ class _RootComponent extends React.Component{
         backgroundPosition: 'center'}}>
         <MailingListHalf />
       </Half>
-      <Half style={{backgroundImage: 'url(/images/stv3bg.png)', backgroundPosition: 'center center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><LatestRelease /></Half>
+      <Half style={{backgroundImage: 'url(/images/stv4bg.png)', backgroundPosition: 'bottom center', backgroundColor: '#12002F', backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}><LatestRelease /></Half>
       <Footer />
     </div>
   }

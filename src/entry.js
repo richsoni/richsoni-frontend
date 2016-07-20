@@ -2,6 +2,7 @@ const React = window.React = require("react")
 
 const pages = {
   homepage:     require("./apps/homepage/entry"),
+  subscribe:    require("./apps/subscribe/entry"),
   blog:         require("./apps/blog-index/entry"),
   'song-index': require("./apps/song-index/entry"),
   songs:        require("./apps/song/entry"),
